@@ -1,0 +1,19 @@
+.card-vertical {
+  width: 27rem;
+}
+
+.card-vertical img {
+  width: 27rem;
+}
+
+@media screen and (max-width: 64rem) {
+  .filter-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 80%;
+  }
+}

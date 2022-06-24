@@ -1,27 +1,31 @@
 import React from "react";
+import { GoKebabVertical } from "react-icons/go";
 import "../Cards/Cards.css";
 
-export default function Cards({ _id, title, creator }) {
+const Cards = ({ _id, title, creator, profile }) => {
   return (
     <div>
-      <div class="card-vertical">
+      <div className="card-vertical">
         <img
-          class="card-image"
-          src={`https://i.ytimg.com/vi/${_id}/hq720.jpg`}
+          className="card-image"
+          src={`https://i.ytimg.com/vi/${_id}/hqdefault.jpg`}
           alt=" "
         />
-        <span class="card-badge">Trending</span>
-        <div class="card-info">
-          <div class="card-title">
-            <div>
-              <h3 class="card-title-header">{title}</h3>
-            </div>
 
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
+        <div className="card-info">
+          <div className="card-title">
+            <div></div>
+            <h3 className="card-title-header">{title}</h3>
+          </div>
+          <div className="video-desc">
+            <img className="disc creator-avator avator-xs-size" src={profile} />
+            <p className="disc">{creator}</p>
+            <GoKebabVertical className="disc" />
           </div>
         </div>
-        <div class="card-creator">{creator}</div>
       </div>
     </div>
   );
-}
+};
+
+export { Cards };

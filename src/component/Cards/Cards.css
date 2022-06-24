@@ -1,9 +1,39 @@
 .card-vertical {
-  width: 27rem;
+  width: 20rem;
+  height: 18rem;
+  /* height: fit-content; */
 }
+/* height: fit-content; */
 
 .card-vertical img {
-  width: 27rem;
+  /* width: 20rem; */
+  height: fit-content;
+}
+
+.card-title-header {
+  font-size: large;
+}
+
+.video-desc {
+  display: flex;
+  /* gap: 10.8rem; */
+}
+
+.video-desc > .creator-avator {
+  border: 2px solid black;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.video-desc > .avatar-xs-size {
+  width: 3rem;
+  height: 3rem;
+  font-size: 0.8rem;
+}
+
+.video-desc > .avatar {
+  border-radius: 50%;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 64rem) {

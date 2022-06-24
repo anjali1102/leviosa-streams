@@ -1,7 +1,7 @@
 import React from "react";
 
-const Watchlaterpage = () => {
+const WatchLaterpage = () => {
   return <div>Watchlaterpage</div>;
 };
 
-export { Watchlaterpage };
+export { WatchLaterpage };

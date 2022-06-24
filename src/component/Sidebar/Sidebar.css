@@ -1,7 +1,11 @@
+/* * {
+  outline: 1px solid red;
+} */
+
 .component-list {
   width: 20%;
   padding: 1.5rem;
-  background-color: var(--background);
+  /* background-color: var(--background); */
   overflow-y: scroll;
   max-height: 80vh;
 }
@@ -56,7 +60,7 @@
 
 .component-list-item-active {
   color: white;
-  background-color: var(--black);
+  /* background-color: var(--black); */
 }
 
 .embed {
@@ -155,11 +159,10 @@ li {
 }
 
 .sidebar-wrapper {
-  background-color: green;
   flex-direction: column;
   width: 16.87rem;
   height: 100%;
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   overflow-y: auto;
   flex-shrink: 0;
   grid-gap: 2rem;
@@ -168,4 +171,9 @@ li {
   position: sticky;
   top: 90px;
   left: 0;
+}
+
+.sidebar-content {
+  padding: 0;
+  text-align: left;
 }

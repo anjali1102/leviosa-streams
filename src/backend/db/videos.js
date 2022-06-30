@@ -5,17 +5,91 @@
 
 export const videos = [
   {
-    _id: "Wo5dMEP_BbI",
-    title: "Awesome Video about Coding",
+    _id: "zSEqh7LiErw",
+    title: "The actual cost of watching Instagram",
+    creator: "Chetan Bhagat",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    creator: "Soham Shah",
+      "What is your Instagram screentime and how much you are you losing already?",
+    category: "Podcasts",
+    profile:
+      "	https://yt3.ggpht.com/ytc/AKedOLRXtqyuEj44Lb4VURGeO8dM0eiXglh1uHfrCITE=s88-c-k-c0x00ffffff-no-rj",
   },
   {
-    _id: "F_Riqjdh2oM",
-    title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
-    creator: "Sentdex",
+    _id: "fZSG52Q-Wmk",
+    title: "Advice to my 22 year old self",
+    creator: "Chetan Bhagat",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "I wish I knew these things earlier. But better late than never.",
+    category: "Podcasts",
+    profile:
+      "	https://yt3.ggpht.com/ytc/AKedOLRXtqyuEj44Lb4VURGeO8dM0eiXglh1uHfrCITE=s88-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    _id: "h17h92ccQ2M",
+    title: "Podcast with Anshuman Journey ",
+    creator: "BeerBiceps",
+    description:
+      "I wish I knew these things earlier. But better late than never.",
+    category: "Podcasts",
+    profile:
+      "	https://yt3.ggpht.com/ytc/AKedOLRXtqyuEj44Lb4VURGeO8dM0eiXglh1uHfrCITE=s88-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    _id: "yNaN5kYTNLY",
+    title: "Financial Planning for your 20s !",
+    creator: "Ankur Warikoo",
+    description:
+      "I wish I knew these things earlier. But better late than never.",
+    category: "Money",
+    profile:
+      "	https://yt3.ggpht.com/ytc/AKedOLRXtqyuEj44Lb4VURGeO8dM0eiXglh1uHfrCITE=s88-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    _id: "1nF6LENGLnU",
+    title: "Opportunities for Tier 3 Students !",
+    creator: "Ishan Sharma",
+    description:
+      " Harsh Bardhan Mishra shares how he gets opportunities in his career as a tier 3 student.",
+    category: "Coding",
+    profile:
+      "	https://yt3.ggpht.com/ytc/AKedOLRXtqyuEj44Lb4VURGeO8dM0eiXglh1uHfrCITE=s88-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    _id: "XXaZLdBaDqY",
+    title: "Frontend Development with Akshay...",
+    creator: "Riddhi Dutta",
+    description: " Must Watch for all aspiring UI devs! ",
+    category: "Coding",
+    profile:
+      "	https://yt3.ggpht.com/ytc/AKedOLRXtqyuEj44Lb4VURGeO8dM0eiXglh1uHfrCITE=s88-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    _id: "EADBPL6eeqY",
+    title: " Job interviews through Cold Emailing ",
+    creator: "Roadside Coder",
+    description: " I got my job through cold emailing, and you can do it too! ",
+    category: "Coding",
+    profile:
+      "	https://yt3.ggpht.com/ytc/AKedOLRXtqyuEj44Lb4VURGeO8dM0eiXglh1uHfrCITE=s88-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    _id: "olbNTCU5vi4",
+    title: " From BCA to Unacademy SDE !",
+    creator: "The Geek Monk",
+    description:
+      " In this video we have Kushank who is here to tell us everything about how he got Job as SDE at Unacademy after BCA. ",
+    category: "Podcasts",
+    profile:
+      "	https://yt3.ggpht.com/ytc/AKedOLRXtqyuEj44Lb4VURGeO8dM0eiXglh1uHfrCITE=s88-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    _id: "wz1PHWB1HDk",
+    title: " Top 10 Startups from Delhi-NCR",
+    creator: "Backstage With Millionaires",
+    description:
+      "We look at top 10 Indian startups based in the Delhi-NCR region.",
+    category: "Podcasts",
+    profile:
+      "	https://yt3.ggpht.com/ytc/AKedOLRXtqyuEj44Lb4VURGeO8dM0eiXglh1uHfrCITE=s88-c-k-c0x00ffffff-no-rj",
   },
 ];

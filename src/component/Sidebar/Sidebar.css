@@ -1,0 +1,167 @@
+.component-list {
+  width: 20%;
+  padding: 1.5rem;
+  overflow-y: scroll;
+  max-height: 80vh;
+}
+
+.show {
+  display: initial;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.hide {
+  display: none;
+}
+
+.component-page {
+  margin-top: 1em;
+}
+
+.component-list {
+  margin-top: 3em;
+}
+
+.component-list-item {
+  font-size: 1rem;
+  width: 100vw;
+  padding: 0.5em 0;
+}
+
+.component-list-item:focus {
+  background-color: #0d0543;
+  color: white;
+}
+
+.component-list-item:hover {
+  background-color: #e3fffd;
+  color: #0d0543;
+  transition: 0.5s ease;
+}
+
+.component-list-item:active {
+  background-color: black;
+  color: white;
+}
+
+.component-list-item {
+  color: black;
+  text-decoration: none;
+}
+
+.component-list-item-active {
+  color: white;
+}
+
+.embed {
+  width: 100%;
+  margin-bottom: 1.4rem;
+}
+
+.fixed {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.main-page {
+  margin-top: 82px;
+  display: flex;
+  position: relative;
+  top: 3.5rem;
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  margin-top: 6em;
+}
+
+.component-list {
+  position: fixed;
+  order: -1;
+  width: 14rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  text-align: left;
+  margin: 0 0;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.toggler {
+  display: none;
+}
+
+.nav {
+  position: sticky;
+  order: -1;
+  width: 15%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  text-align: left;
+  margin: 0 0;
+}
+
+.nav:hover {
+  overflow-y: auto;
+}
+
+.component-list-item {
+  margin-top: 0;
+  font-size: 1.3rem;
+  padding: 0.5em 0;
+  width: 100%;
+}
+
+.grid {
+  background: var(--light-gray);
+  border-radius: 0.2rem;
+  padding: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 0.5rem;
+}
+
+.sidebar-icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.sidebar-wrapper {
+  flex-direction: column;
+  width: 16.87rem;
+  height: 100%;
+  overflow-y: auto;
+  flex-shrink: 0;
+  grid-gap: 2rem;
+  gap: 2rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  left: 0;
+}
+
+.sidebar-content {
+  padding: 0;
+  text-align: left;
+}

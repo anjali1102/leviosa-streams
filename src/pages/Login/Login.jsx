@@ -7,8 +7,6 @@ import { loginUser } from "../../store/authSlice";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState(null);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
@@ -18,10 +16,6 @@ const Login = () => {
   const login = (email, password) => {
     dispatch(loginUser({ email, password }));
     navigate(from, { replace: true });
-  };
-
-  const logout = () => {
-    setUser(null);
   };
 
   const loginWithGuest = (e) => {

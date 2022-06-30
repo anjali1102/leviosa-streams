@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./Homepage.css";
 import { Cards } from "../../component/index";
 import { useSelector, useDispatch } from "react-redux";
 import { STATUSES, fetchVideos } from "../../store/videoSlice";
 
 const Homepage = () => {
-  // const [videos, setVideos] = useState([]);
   const { data, status } = useSelector((state) => state.video);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -35,7 +33,6 @@ const Homepage = () => {
         <div className="videoList-container">
           {data?.map((items) => {
             const { _id, title, creator, description, profile } = items;
-
             return (
               <Cards
                 _id={_id}

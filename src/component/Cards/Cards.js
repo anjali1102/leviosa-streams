@@ -18,7 +18,11 @@ const Cards = ({ _id, title, creator, profile }) => {
             <h3 className="card-title-header">{title}</h3>
           </div>
           <div className="video-desc">
-            <img className="disc creator-avator avator-xs-size" src={profile} />
+            <img
+              className="disc creator-avator avator-xs-size"
+              src={profile}
+              alt={title}
+            />
             <p className="disc">{creator}</p>
             <GoKebabVertical className="disc" />
           </div>

@@ -1,21 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-// import { signupHandler } from "../../backend/controllers/AuthController";
-// import { useAuth } from "../../backend/hooks/useAuth";
 import "./SignUp.css";
 
 const SignUp = () => {
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [flag, setFlag] = useState(false);
-
-  // const handleSubmit = (e) => {
-  //   signup();
-  // };
-
-  // const { signup } = useAuth();
-
   return (
     <div className="main-signup">
       <div className="center">

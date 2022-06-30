@@ -13,7 +13,7 @@ const Cards = ({ _id, title, creator, profile }) => {
         />
 
         <div className="card-info">
-          <div className="card-title">
+          <div className="card-heading">
             <div></div>
             <h3 className="card-title-header">{title}</h3>
           </div>

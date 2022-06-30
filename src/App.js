@@ -1,6 +1,6 @@
 import { Route, Router, Routes } from "react-router-dom";
 import "./App.css";
-import { Login, SignUp } from "./component/Auth/index";
+
 import {
   SidebarLayoutPage,
   Homepage,
@@ -9,14 +9,16 @@ import {
   Historypage,
   WatchLaterpage,
 } from "./pages/index";
-import { RequireAuth } from "./Auth/RequireAuth";
-import { fetchVideos } from "./videoSlice/VideoSlice";
+
 import { useDispatch } from "react-redux";
+import { Login } from "./pages/Login/Login";
+import { SignUp } from "./pages/SignUp/SignUp";
+import { fetchVideos } from "./store/videoSlice";
+import { RequireAuth } from "./requireAuth";
 
 function App() {
   const dispatch = useDispatch();
   dispatch(fetchVideos());
-  console.log(fetchVideos);
   return (
     <div className="App">
       <Routes>

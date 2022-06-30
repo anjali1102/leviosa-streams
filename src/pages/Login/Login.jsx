@@ -1,46 +1,35 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-import { useAuth } from "../../../Auth/AuthContext";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { loginUser } from "../../store/authSlice";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState();
+
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const dispatch=useDispatch()
-  // const signup = () => {
-  //   setUser("anjali");
-  // };
 
-  const login = (email, password) => {
-    axios
-      .post("/api/auth/login", {
-        email,
-        password,
-      })
-      .then(function (response) {
-        setUser(response.data.foundUser);
-        setToken(response.data.encodedToken);
-        // localStorage.setItem("user", JSON.stringify(response.data.user));
-        // localStorage.setItem("token", JSON.stringify(response.data.token));
-        navigate("/");
-      })
-      .catch((e) => console.log(e));
+  const from = location.state?.from?.pathname || "/";
+
+  const Login = (email, password) => {
+
+    dispatch(loginUser({ email, password })); //dispatch(data)  => //dispatch(loginUser(data))
+    navigate(from, { replace: true });
   };
 
   const logout = () => {
-    // localStorage.removeItem("user");
     setUser(null);
   };
 
   const loginWithGuest = (e) => {
     e.preventDefault();
-    login("anjaliChauhan@gmail.com", "123");
+    Login("anjaliChauhan@gmail.com", "123");
   };
 
   return (

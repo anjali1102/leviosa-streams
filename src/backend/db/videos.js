@@ -56,7 +56,7 @@ export const videos = [
   },
   {
     _id: "XXaZLdBaDqY",
-    title: "Frontend Development with Akshay Saini !",
+    title: "Frontend Development with Akshay...",
     creator: "Riddhi Dutta",
     description: " Must Watch for all aspiring UI devs! ",
     category: "Coding",
@@ -65,7 +65,7 @@ export const videos = [
   },
   {
     _id: "EADBPL6eeqY",
-    title: " Job interviews through Cold Emailing ( As a Fresher ) !",
+    title: " Job interviews through Cold Emailing ",
     creator: "Roadside Coder",
     description: " I got my job through cold emailing, and you can do it too! ",
     category: "Coding",
@@ -74,7 +74,7 @@ export const videos = [
   },
   {
     _id: "olbNTCU5vi4",
-    title: " From BCA to Unacademy SDE | How he got Job after BCA?",
+    title: " From BCA to Unacademy SDE !",
     creator: "The Geek Monk",
     description:
       " In this video we have Kushank who is here to tell us everything about how he got Job as SDE at Unacademy after BCA. ",

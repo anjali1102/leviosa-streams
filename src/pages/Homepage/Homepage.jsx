@@ -1,22 +1,18 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-import { Cards } from "../../component/index";
 import "./Homepage.css";
-import { useSelector } from "react-redux";
-import { STATUSES } from "../store/videoSlice";
+import { Cards } from "../../component/index";
+import { useSelector, useDispatch } from "react-redux";
+import { STATUSES, fetchVideos } from "../../store/videoSlice";
 
 const Homepage = () => {
   const [videos, setVideos] = useState([]);
   const { data, status } = useSelector((state) => state.video);
-  console.log(data);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const { data } = await axios.get("/api/videos");
-  //     setVideos(data.videos);
-  //   })();
-  // }, []);
-  // console.log(videos);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchVideos());
+  }, [dispatch]);
 
   if (status === STATUSES.LOADING) {
     return <h2>Loading....</h2>;
@@ -39,7 +35,6 @@ const Homepage = () => {
         <div className="videoList-container">
           {data?.map((items) => {
             const { _id, title, creator, description, profile } = items;
-            console.log(title);
 
             return (
               <Cards

@@ -2,15 +2,10 @@ import "./Sidebar.css";
 import { GoHome, GoHeart, GoHistory, GoClock, GoPlay } from "react-icons/go";
 import { FiUser, FiLogOut } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { Login } from "../../pages/Login/Login";
-import { useState } from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../store/authSlice";
 
 const Sidebar = () => {
-  const [getToken, setgetToken] = useState(localStorage.getItem("token"));
-
   const {
     user: { token },
   } = useSelector((state) => state.auth);
@@ -58,7 +53,12 @@ const Sidebar = () => {
 
           <li>
             {token ? (
-              <button className="component-list-item" onClick={()=>{Dispatch(logout())}}>
+              <button
+                className="component-list-item"
+                onClick={() => {
+                  Dispatch(logout());
+                }}
+              >
                 <FiLogOut className="sidebar-icon " />
                 Logout
               </button>

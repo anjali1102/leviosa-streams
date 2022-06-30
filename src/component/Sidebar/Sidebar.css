@@ -1,11 +1,6 @@
-/* * {
-  outline: 1px solid red;
-} */
-
 .component-list {
   width: 20%;
   padding: 1.5rem;
-  /* background-color: var(--background); */
   overflow-y: scroll;
   max-height: 80vh;
 }
@@ -60,18 +55,12 @@
 
 .component-list-item-active {
   color: white;
-  /* background-color: var(--black); */
 }
 
 .embed {
   width: 100%;
   margin-bottom: 1.4rem;
 }
-
-/* @media (min-width: 650px) {
-    .toggler-new {
-      display: none;
-    } */
 
 .fixed {
   position: fixed;
@@ -162,7 +151,6 @@ li {
   flex-direction: column;
   width: 16.87rem;
   height: 100%;
-  /* padding: 1rem 2rem; */
   overflow-y: auto;
   flex-shrink: 0;
   grid-gap: 2rem;

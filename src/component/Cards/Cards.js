@@ -9,7 +9,7 @@ const Cards = ({ _id, title, creator, profile }) => {
         <img
           className="card-image"
           src={`https://i.ytimg.com/vi/${_id}/hqdefault.jpg`}
-          alt=" "
+          alt={_id}
         />
 
         <div className="card-info">

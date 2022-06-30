@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { STATUSES, fetchVideos } from "../../store/videoSlice";
 
 const Homepage = () => {
-  const [videos, setVideos] = useState([]);
+  // const [videos, setVideos] = useState([]);
   const { data, status } = useSelector((state) => state.video);
 
   const dispatch = useDispatch();

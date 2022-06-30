@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Login.css";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { loginUser } from "../../store/authSlice";
 
@@ -14,12 +13,10 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-
   const from = location.state?.from?.pathname || "/";
 
-  const Login = (email, password) => {
-
-    dispatch(loginUser({ email, password })); //dispatch(data)  => //dispatch(loginUser(data))
+  const login = (email, password) => {
+    dispatch(loginUser({ email, password }));
     navigate(from, { replace: true });
   };
 
@@ -29,7 +26,7 @@ const Login = () => {
 
   const loginWithGuest = (e) => {
     e.preventDefault();
-    Login("anjaliChauhan@gmail.com", "123");
+    login("anjaliChauhan@gmail.com", "123");
   };
 
   return (
@@ -46,7 +43,6 @@ const Login = () => {
               }}
               required
             />
-            {/* <span></span> */}
             <label>Email Address</label>
           </div>
           <div className="txt_field">

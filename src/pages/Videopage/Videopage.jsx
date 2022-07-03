@@ -3,25 +3,23 @@ import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import { useParams } from "react-router-dom";
 import styles from "./Videopage.module.css";
-import { AiOutlineLike, AiFillLike } from "react-icons/ai";
+import { AiOutlineLike } from "react-icons/ai";
 import { MdPlaylistAdd } from "react-icons/md";
 
 const Videopage = () => {
   var { videoId } = useParams();
   const [videoInfo, setVideoInfo] = useState(null);
 
-  {
-    useEffect(() => {
-      (async () => {
-        try {
-          const response = await axios.get(`/api/video/${videoId}`);
-          setVideoInfo(response.data.video);
-        } catch (error) {
-          console.log("error", error);
-        }
-      })();
-    }, []);
-  }
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await axios.get(`/api/video/${videoId}`);
+        setVideoInfo(response.data.video);
+      } catch (error) {
+        console.log("error", error);
+      }
+    })();
+  }, [videoId]);
 
   return (
     <main className={styles.videoPage}>
@@ -38,7 +36,11 @@ const Videopage = () => {
           <div className="videopg_main-con">
             <h2 className={styles.title}>{videoInfo?.title}</h2>
             <div className={styles.videoDesc}>
-              <img className={styles.videoImg} src={videoInfo?.profile} />
+              <img
+                className={styles.videoImg}
+                src={videoInfo?.profile}
+                alt={videoInfo?.profile}
+              />
               <div className={styles.creator} src={videoInfo?.creator}>
                 {videoInfo?.creator}
               </div>

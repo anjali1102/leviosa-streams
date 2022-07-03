@@ -15,6 +15,7 @@ import { Login } from "./pages/Login/Login";
 import { SignUp } from "./pages/SignUp/SignUp";
 import { fetchVideos } from "./store/videoSlice";
 import { RequireAuth } from "./requireAuth";
+import { Videopage } from "./pages/Videopage/Videopage";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route element={<SidebarLayoutPage />}>
-          <Route path="/" element={<Homepage />}></Route>
+          <Route path="/" element={<Homepage />} />
           <Route
             path="/likes"
             element={
@@ -31,7 +32,7 @@ function App() {
                 <Likepage />
               </RequireAuth>
             }
-          ></Route>
+          />
           <Route
             path="/playlist"
             element={
@@ -39,7 +40,7 @@ function App() {
                 <Playlistpage />
               </RequireAuth>
             }
-          ></Route>
+          />
           <Route
             path="/history"
             element={
@@ -47,7 +48,7 @@ function App() {
                 <Historypage />
               </RequireAuth>
             }
-          ></Route>
+          />
           <Route
             path="/watchlater"
             element={
@@ -55,9 +56,10 @@ function App() {
                 <WatchLaterpage />
               </RequireAuth>
             }
-          ></Route>
-          <Route path="/signup" element={<SignUp />}></Route>
-          <Route path="/login" element={<Login />}></Route>
+          />
+          <Route path="video/:videoId" element={<Videopage />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
     </div>

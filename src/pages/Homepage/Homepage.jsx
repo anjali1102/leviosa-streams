@@ -23,10 +23,10 @@ const Homepage = () => {
   return (
     <>
       <div className="category-list">
-        <button className="chip-ctg">Coding</button>
-        <button className="chip-ctg">Podcasts</button>
-        <button className="chip-ctg">Money</button>
         <button className="chip-ctg">All</button>
+        <button className="chip-ctg">Funny</button>
+        <button className="chip-ctg">Facts</button>
+        <button className="chip-ctg">Interview</button>
       </div>
 
       <main className="main-product">

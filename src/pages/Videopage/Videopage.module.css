@@ -1,0 +1,46 @@
+.videoPage {
+  margin: 1rem;
+}
+
+.title {
+  padding: 0.5rem 0rem;
+  font-size: 1.2rem;
+}
+
+.videoDesc {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.5rem;
+}
+
+.buttons {
+  margin-left: auto;
+  margin-right: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.videoImg {
+  width: 3rem;
+  height: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.creator {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.description {
+  white-space: pre-wrap;
+  margin-top: 1rem;
+}

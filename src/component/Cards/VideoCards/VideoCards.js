@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../../Cards/Cards.css";
 import { IoIosCloseCircle } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromLikes, getLikes } from "../../../store/likeSlice";
+import { removeFromLikes } from "../../../store/likeSlice";
 
 const VideoCards = ({ _id, title, creator, profile }) => {
   const {

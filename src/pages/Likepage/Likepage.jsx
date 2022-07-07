@@ -10,13 +10,11 @@ const Likepage = () => {
     user: { token },
   } = useSelector((store) => store.auth);
   const { likes } = useSelector((store) => store.like);
-  console.log(likes);
-  // const [videoList, setVideoList] = useState([]);
 
   useEffect(() => {
     const data = { token: token };
     dispatch(getLikes(data));
-  }, [dispatch]);
+  }, [token]);
 
   return (
     <main className="main-product">

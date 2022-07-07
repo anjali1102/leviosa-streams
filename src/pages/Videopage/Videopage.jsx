@@ -57,7 +57,7 @@ const Videopage = () => {
     } else {
       setPresentInLikes(false);
     }
-  }, [likes]);
+  }, [likes, videoId]);
 
   return (
     <main className={styles.videoPage}>

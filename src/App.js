@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Mockman from "mockman-js";
 import "./App.css";
 
 import {
@@ -60,6 +61,7 @@ function App() {
           <Route path="video/:videoId" element={<Videopage />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/mockapi" element={<Mockman />} />
         </Route>
       </Routes>
     </div>

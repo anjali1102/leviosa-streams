@@ -1,78 +1,60 @@
-import "./Sidebar.css";
+import React from "react";
 import { GoHome, GoHeart, GoHistory, GoClock, GoPlay } from "react-icons/go";
-import { FiUser, FiLogOut } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../../store/authSlice";
 
+import "./Sidebar.css";
 const Sidebar = () => {
-  const {
-    user: { token },
-  } = useSelector((state) => state.auth);
-
-  const Dispatch = useDispatch();
-
   return (
-    <section className="sidebar-wrapper">
-      <aside className="component-list">
-        <ul>
-          <li>
-            <Link to="/" className="component-list-item">
-              <GoHome className="sidebar-icon" />
-              Home
-            </Link>
+    <div className="Sidebar">
+      <ul className="SidebarList">
+        <Link to="/">
+          <li className="listRow">
+            <div id="icon">
+              <GoHome />
+            </div>
+            <div id="title">Home</div>
           </li>
+        </Link>
 
-          <li className="">
-            <Link to="/likes" className="component-list-item">
-              <GoHeart className="sidebar-icon" />
-              Like
-            </Link>
+        <Link to="/likes">
+          <li className="listRow">
+            <div id="icon">
+              <GoHeart />
+            </div>
+            <div id="title">Like</div>
           </li>
+        </Link>
 
-          <li>
-            <Link to="/playlist" className="component-list-item">
-              <GoPlay className="sidebar-icon" />
-              Playlist
-            </Link>
+        <Link to="/playlist">
+          <li className="listRow">
+            <div id="icon">
+              <GoPlay />
+            </div>
+            <div id="title">Playlist</div>
           </li>
+        </Link>
 
-          <li>
-            <Link to="/watchlater" className="component-list-item">
-              <GoClock className="sidebar-icon" />
-              Watch Later
-            </Link>
+        <Link to="/watchlater">
+          <li className="listRow">
+            <div id="icon">
+              <GoClock />
+            </div>
+            <div id="title">Watch Later</div>
           </li>
+        </Link>
 
-          <li>
-            <Link to="/history" className="component-list-item">
-              <GoHistory className="sidebar-icon" />
-              History
-            </Link>
+        <Link to="/history">
+          <li className="listRow">
+            <div id="icon">
+              <GoHistory />
+            </div>
+            <div id="title">History</div>
           </li>
-
-          <li>
-            {token ? (
-              <button
-                className="component-list-item"
-                onClick={() => {
-                  Dispatch(logout());
-                }}
-              >
-                <FiLogOut className="sidebar-icon " />
-                Logout
-              </button>
-            ) : (
-              <Link to="/login" className="component-list-item">
-                <FiUser className="sidebar-icon" />
-                Login
-              </Link>
-            )}
-          </li>
-        </ul>
-      </aside>
-    </section>
+        </Link>
+      </ul>
+    </div>
   );
 };
 
 export { Sidebar };
+

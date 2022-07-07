@@ -7,12 +7,12 @@
   grid-row-gap: 2rem;
   row-gap: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-column-gap: 2rem;
   width: calc(100% - 3rem);
   margin-left: 1rem;
   margin-right: 1rem;
-  max-width: 64rem;
+  max-width: auto;
 }
 
 .category-list {
@@ -21,7 +21,6 @@
   gap: 1rem;
   padding: 1rem;
 }
-
 
 .chip-ctg {
   background: -webkit-linear-gradient(to right, #fdb99b, #cf8bf3, #a770ef);

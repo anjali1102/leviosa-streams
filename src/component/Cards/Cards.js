@@ -8,11 +8,11 @@ const Cards = ({ _id, title, creator, profile }) => {
     <div>
       <div className="card-vertical">
         <Link to={`/video/${_id}`}>
-        <img
-          className="card-image"
-          src={`https://i.ytimg.com/vi/${_id}/hqdefault.jpg`}
-          alt={_id}
-        />
+          <img
+            className="card-image"
+            src={`https://i.ytimg.com/vi/${_id}/hqdefault.jpg`}
+            alt={_id}
+          />
         </Link>
 
         <div className="card-info">
@@ -27,7 +27,9 @@ const Cards = ({ _id, title, creator, profile }) => {
               alt={title}
             />
             <p className="disc">{creator}</p>
-            <GoKebabVertical className="disc" />
+            <div className="cardsIconContainer">
+              <GoKebabVertical />
+            </div>
           </div>
         </div>
       </div>

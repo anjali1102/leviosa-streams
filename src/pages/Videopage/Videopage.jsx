@@ -3,12 +3,42 @@ import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import { useParams } from "react-router-dom";
 import styles from "./Videopage.module.css";
-import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineLike, AiTwotoneLike } from "react-icons/ai";
 import { MdPlaylistAdd } from "react-icons/md";
+import { addToLikes, removeFromLikes } from "../../store/likeSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+
+const checkIfPresentLikes = (likes, videoId) => {
+  return likes.some((item) => item._id === videoId);
+};
 
 const Videopage = () => {
+  const {
+    user: { token },
+  } = useSelector((store) => store.auth);
+
+  const { likes } = useSelector((store) => store.like);
+
   var { videoId } = useParams();
   const [videoInfo, setVideoInfo] = useState(null);
+  const Dispatch = useDispatch();
+
+  const [presentInLikes, setPresentInLikes] = useState(
+    checkIfPresentLikes(likes, videoId)
+  );
+
+  const likeHandler = () => {
+    if (token) {
+      if (checkIfPresentLikes(likes, videoId)) {
+        Dispatch(removeFromLikes({ videoId: videoId, token: token }));
+      } else {
+        Dispatch(addToLikes({ videoInfo: videoInfo, token: token }));
+      }
+      return;
+    }
+    toast.warning("Kindly Login to add Likes");
+  };
 
   useEffect(() => {
     (async () => {
@@ -20,6 +50,14 @@ const Videopage = () => {
       }
     })();
   }, [videoId]);
+
+  useEffect(() => {
+    if (checkIfPresentLikes(likes, videoId)) {
+      setPresentInLikes(true);
+    } else {
+      setPresentInLikes(false);
+    }
+  }, [likes]);
 
   return (
     <main className={styles.videoPage}>
@@ -45,10 +83,16 @@ const Videopage = () => {
                 {videoInfo?.creator}
               </div>
               <div className={styles.buttons}>
-                <div>
-                  <button className={styles.button}>
-                    <AiOutlineLike />
-                  </button>
+                <div onClick={likeHandler}>
+                  {presentInLikes ? (
+                    <button className={styles.button}>
+                      <AiTwotoneLike className={styles.button} />
+                    </button>
+                  ) : (
+                    <button className={styles.button}>
+                      <AiOutlineLike />
+                    </button>
+                  )}
                 </div>
                 <div>
                   <MdPlaylistAdd className={styles.button} />

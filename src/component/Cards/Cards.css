@@ -1,23 +1,24 @@
 .card-vertical {
   width: 20rem;
   height: 18rem;
-  height: fit-content;
+  height: 22rem;
 }
 
 .card-vertical img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .card-title-header {
-  font-size: large;
+  font-size: smaller;
 }
 
 .video-desc {
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
 }
 
 .video-desc > .creator-avator {
@@ -35,6 +36,22 @@
 .video-desc > .avatar {
   border-radius: 50%;
   background-color: transparent;
+}
+
+.videoCards-cont {
+  position: relative;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+}
+
+.cardsIconContainer {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 64rem) {

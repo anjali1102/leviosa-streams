@@ -14,7 +14,7 @@ const Likepage = () => {
   useEffect(() => {
     const data = { token: token };
     dispatch(getLikes(data));
-  }, [token]);
+  }, []);
 
   return (
     <main className="main-product">

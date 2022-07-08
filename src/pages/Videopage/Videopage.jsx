@@ -8,6 +8,7 @@ import { MdPlaylistAdd } from "react-icons/md";
 import { addToLikes, removeFromLikes } from "../../store/likeSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import { addToHistory } from "../../store/historySlice";
 
 const checkIfPresentLikes = (likes, videoId) => {
   return likes.some((item) => item._id === videoId);
@@ -67,6 +68,7 @@ const Videopage = () => {
         controls={true}
         style={{ aspectRatio: "9/16" }}
         playing
+        onPlay={() => Dispatch(addToHistory({video: videoInfo, token}))}
       ></ReactPlayer>
 
       {videoInfo && (

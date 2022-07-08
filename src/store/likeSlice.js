@@ -85,10 +85,8 @@ export const addToLikes = createAsyncThunk(
           },
         }
       );
-      console.log("response addTolike", response);
       return response.data;
     } catch (error) {
-      console.log("error addTolikes", error);
       return thunkAPI.rejectWithValue(error);
     }
   }

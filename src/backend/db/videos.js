@@ -88,7 +88,7 @@ export const videos = [
     No commercial purposes. Only to keep an archive of J.K. Rowling's appearances. `,
     category: "Interview",
     profile:
-      "https://yt3.ggpht.com/ytc/AKedOLQt2Nkv3AeWRNCqdBThxo8EQlIWy-bVuVR3biJo=s48-c-k-c0x00ffffff-no-rj",
+      "	https://yt3.ggpht.com/ytc/AKedOLQt2Nkv3AeWRNCqdBThxo8EQlIWy-bVuVR3biJo=s88-c-k-c0x00ffffff-no-rj",
   },
   {
     _id: "CGfsq5l3uzQ",

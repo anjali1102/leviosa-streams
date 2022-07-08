@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../../Cards/Cards.css";
 import { IoIosCloseCircle } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromLikes } from "../../../store/likeSlice";
+import { removeFromHistory } from "../../../store/historySlice";
 
 const VideoCards = ({ _id, title, creator, profile }) => {
   const {
@@ -11,7 +12,9 @@ const VideoCards = ({ _id, title, creator, profile }) => {
   } = useSelector((store) => store.auth);
 
   const Dispatch = useDispatch();
+  const Location = useLocation();
 
+  console.log("Location", Location);
   return (
     <div className="videoCards-cont">
       <div className="card-vertical">
@@ -21,17 +24,20 @@ const VideoCards = ({ _id, title, creator, profile }) => {
             src={`https://i.ytimg.com/vi/${_id}/hqdefault.jpg`}
             alt={_id}
           />
-          <IoIosCloseCircle
-            className="close-icon"
-            onClick={() =>
-              Dispatch(removeFromLikes({ videoId: _id, token: token }))
-            }
-          />
         </Link>
+        <IoIosCloseCircle
+          className="close-icon"
+          onClick={() => {
+            if (Location.pathname === "/likes") {
+              Dispatch(removeFromLikes({ videoId: _id, token }));
+            } else if (Location.pathname === "/history") {
+              Dispatch(removeFromHistory({ videoId: _id, token }));
+            }
+          }}
+        />
 
         <div className="card-info">
           <div className="card-heading">
-            <div></div>
             <h3 className="card-title-header">{title}</h3>
           </div>
         </div>

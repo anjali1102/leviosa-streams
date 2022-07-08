@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Mockman from "mockman-js";
+import { useEffect } from "react";
 import "./App.css";
 
 import {
@@ -20,7 +21,12 @@ import { Videopage } from "./pages/Videopage/Videopage";
 
 function App() {
   const dispatch = useDispatch();
-  dispatch(fetchVideos());
+
+  useEffect(() => {
+    dispatch(fetchVideos());
+  }, []);
+
+  // dispatch(fetchVideos());
   return (
     <div className="App">
       <Routes>

@@ -1,11 +1,10 @@
-import React from "react";
-import "../Cards/Cards.css";
-import { addToWatchLater } from "../../store/watchLaterSlice";
-import { MdOutlineWatchLater } from "react-icons/md";
+import { RiDeleteBinLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { deleteWatchLater } from "../../../store/watchLaterSlice";
+import "../Cards.css";
 
-const Cards = ({ video }) => {
+const HistoryCards = ({ video }) => {
   const { _id, title, creator, profile } = video;
   const dispatch = useDispatch();
   const {
@@ -34,11 +33,11 @@ const Cards = ({ video }) => {
               alt={title}
             />
             <p className="disc">{creator}</p>
-            <div>
-              <MdOutlineWatchLater
-              className="watchLater-icon"
+            <div className="del-icon-cont">
+              <RiDeleteBinLine
+                className="del-icon"
                 onClick={() =>
-                  dispatch(addToWatchLater({ video: video, token: token }))
+                  dispatch(deleteWatchLater({ videoId: _id, token: token }))
                 }
               />
             </div>
@@ -49,4 +48,4 @@ const Cards = ({ video }) => {
   );
 };
 
-export { Cards };
+export { HistoryCards };

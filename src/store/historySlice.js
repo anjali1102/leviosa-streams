@@ -76,7 +76,6 @@ export const getHistory = createAsyncThunk(
           authorization: token,
         },
       });
-      console.log("gethistory fulfilled", response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -98,7 +97,6 @@ export const addToHistory = createAsyncThunk(
           },
         }
       );
-      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);

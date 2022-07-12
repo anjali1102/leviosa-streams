@@ -1,9 +1,18 @@
 import React from "react";
 import { GoHome, GoHeart, GoHistory, GoClock, GoPlay } from "react-icons/go";
+import { FiLogOut, FiUser } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
+import { logout } from "../../store/authSlice";
 import "./Sidebar.css";
+
 const Sidebar = () => {
+  const {
+    user: { token },
+  } = useSelector((state) => state.auth);
+
+  const Dispatch = useDispatch();
+
   return (
     <div className="Sidebar">
       <ul className="SidebarList">
@@ -51,10 +60,32 @@ const Sidebar = () => {
             <div id="title">History</div>
           </li>
         </Link>
+
+        <li>
+          {token ? (
+            <button
+              className="listRow"
+              onClick={() => {
+                Dispatch(logout());
+              }}
+            >
+              <div id="icon">
+                <FiLogOut />
+              </div>
+              <div id="title">Logout</div>
+            </button>
+          ) : (
+            <Link to="/login" className="listRow">
+              <div id="icon">
+                <FiUser />
+              </div>
+              <div id="title">Login</div>
+            </Link>
+          )}
+        </li>
       </ul>
     </div>
   );
 };
 
 export { Sidebar };
-

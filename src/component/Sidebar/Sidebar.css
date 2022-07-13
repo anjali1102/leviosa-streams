@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.SidebarList .listRow {
+.listRow {
   width: 100%;
   height: 70px;
   border: 1px solid #e73933;
@@ -35,4 +35,8 @@
 
 .listRow #title {
   flex: 70%;
+}
+
+button.listRow {
+  background-color: #fa6661;
 }

@@ -47,7 +47,7 @@ const Videopage = () => {
         const response = await axios.get(`/api/video/${videoId}`);
         setVideoInfo(response.data.video);
       } catch (error) {
-        console.log("error", error);
+        console.error("error", error);
       }
     })();
   }, [videoId]);

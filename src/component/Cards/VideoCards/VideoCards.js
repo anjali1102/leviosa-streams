@@ -14,7 +14,6 @@ const VideoCards = ({ _id, title, creator, profile }) => {
   const Dispatch = useDispatch();
   const Location = useLocation();
 
-  console.log("Location", Location);
   return (
     <div className="videoCards-cont">
       <div className="card-vertical">

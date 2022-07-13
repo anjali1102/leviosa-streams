@@ -23,7 +23,6 @@ const Historypage = () => {
     const filteredVideos = videosFromStore.filter((video) =>
       histories.some((ele) => ele._id === video._id)
     );
-    // console.log(histories);
     setVideoList(filteredVideos);
   }, [histories]);
 

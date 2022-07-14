@@ -9,6 +9,8 @@ import { addToLikes, removeFromLikes } from "../../store/likeSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { addToHistory } from "../../store/historySlice";
+import PlaylistPortal from "../../PlaylistPortal";
+// import { postPlaylist } from "../../store/playlistSlice";
 
 const checkIfPresentLikes = (likes, videoId) => {
   return likes.some((item) => item._id === videoId);
@@ -28,7 +30,7 @@ const Videopage = () => {
   const [presentInLikes, setPresentInLikes] = useState(
     checkIfPresentLikes(likes, videoId)
   );
-
+  const [showModal, setShowModal] = useState(false);
   const likeHandler = () => {
     if (token) {
       if (checkIfPresentLikes(likes, videoId)) {
@@ -40,6 +42,13 @@ const Videopage = () => {
     }
     toast.warning("Kindly Login to add Likes");
   };
+
+  //playlistHandler
+  // const playlistHandler = () => {
+
+  //     Dispatch(postPlaylist({ token: token }));
+
+  // };
 
   useEffect(() => {
     (async () => {
@@ -62,13 +71,16 @@ const Videopage = () => {
 
   return (
     <main className={styles.videoPage}>
+      {showModal ? (
+        <PlaylistPortal setShowModal={setShowModal} video={videoInfo} />
+      ) : null}
       <ReactPlayer
         url={`https://www.youtube.com/watch?v=${videoId}`}
         width={"100%"}
         controls={true}
         style={{ aspectRatio: "9/16" }}
         playing
-        onPlay={() => Dispatch(addToHistory({video: videoInfo, token}))}
+        onPlay={() => Dispatch(addToHistory({ video: videoInfo, token }))}
       ></ReactPlayer>
 
       {videoInfo && (
@@ -96,7 +108,7 @@ const Videopage = () => {
                     </button>
                   )}
                 </div>
-                <div>
+                <div onClick={() => setShowModal(true)}>
                   <MdPlaylistAdd className={styles.button} />
                 </div>
               </div>

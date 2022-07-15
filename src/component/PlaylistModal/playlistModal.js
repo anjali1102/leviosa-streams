@@ -6,7 +6,6 @@ import { playlistaction } from "../../store/PlayList/playlistmodel-slice";
 import { PlayListContent } from "./PlayListContent";
 const PlayListModal = () => {
   const dispatch = useDispatch();
-//   const modalSelected = useSelector((state) => state.playlist.modalSelected);
   const closeModalSelected = () => {
     dispatch(playlistaction.setModalSelected(false));
   };

@@ -3,17 +3,9 @@ import { getAllPlaylists, deletePlaylist } from "../../store/playlistSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { FaTrash } from "react-icons/fa";
 import VideoCard from "../Cards/VideoCards/VideoCards";
-// import { toast } from "react-toastify";
 
 export default function Playlist() {
   const playlistDispatch = useDispatch();
-  // const isUserLoggedIn = useSelector((state) => state.auth.isUserLoggedin);
-
-  // const deletePlaylistName = async (playlistId) => {
-  //   if (!isUserLoggedIn) return toast.error("Login to delete playlist");
-  //   await playlistDispatch(deletePlaylist(playlistId)).unwrap();
-  //   return toast.success("Removed playlist successfully!");
-  // };
 
   useEffect(() => {
     playlistDispatch(getAllPlaylists());

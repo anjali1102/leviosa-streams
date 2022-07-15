@@ -29,10 +29,8 @@ const playlistSlice = createSlice({
         state.status = STATUSES.IDLE;
       })
       .addCase(addNewPlaylist.fulfilled, (state, action) => {
-        console.log(action.payload);
         if (action.payload) {
           state.playlist = action.payload.playlists;
-          console.log(state.playlist);
         }
       })
       .addCase(addNewPlaylist.rejected, (state, action) => {
@@ -43,7 +41,6 @@ const playlistSlice = createSlice({
         state.status = STATUSES.IDLE;
       })
       .addCase(deletePlaylist.fulfilled, (state, action) => {
-        console.log(action.payload);
         if (action.payload) {
           state.playlist = action.payload.playlists;
         }
@@ -57,8 +54,6 @@ const playlistSlice = createSlice({
       })
       .addCase(addVideoToPlaylist.fulfilled, (state, action) => {
         if (action.payload) {
-          // console.log(action.payload);
-          // state.playlist = action.payload.playlists;
           const updatedPlaylists = state.playlist.map((item) => {
             if (action.payload.playlist._id === item._id) {
               return action.payload.playlist;
@@ -68,7 +63,6 @@ const playlistSlice = createSlice({
           });
           state.playlist = updatedPlaylists;
         }
-        console.log(action.payload);
       })
       .addCase(addVideoToPlaylist.rejected, (state, action) => {
         state.status = STATUSES.ERROR;
@@ -88,7 +82,6 @@ const playlistSlice = createSlice({
           });
           state.playlist = updatedRemovePlaylists;
         }
-        console.log(action.payload);
       })
       .addCase(removeVideoFromPlaylist.rejected, (state, action) => {
         state.status = STATUSES.ERROR;
@@ -119,7 +112,6 @@ export const addNewPlaylist = createAsyncThunk(
   "playlist/addNewPlaylist",
   async (data, thunkAPI) => {
     const { token, playlist } = data;
-    console.log("data", data);
     try {
       const response = await axios.post(
         "/api/user/playlists",
@@ -172,7 +164,6 @@ export const addVideoToPlaylist = createAsyncThunk(
           },
         }
       );
-      console.log(response.data, data);
       return response.data;
     } catch (error) {
       thunkAPI.rejectWithValue(error);
@@ -193,8 +184,6 @@ export const removeVideoFromPlaylist = createAsyncThunk(
           },
         }
       );
-      console.log(response.data, data);
-
       return response.data;
     } catch (error) {
       thunkAPI.rejectWithValue(error);

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { HistoryCards } from "../../component/Cards/HistoryCards/HistoryCards";
 import { Link } from "react-router-dom";
 import { VideoCards } from "../../component/Cards/VideoCards/VideoCards";
 import { getAllPlaylist } from "../../store/playlistSlice";

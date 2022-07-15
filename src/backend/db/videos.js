@@ -43,12 +43,11 @@ export const videos = [
     _id: "8lcaOicMVGM",
     title: "Tom Felton Won't Be The Same Anymore After Harry Potter |⭐ OSSA",
     creator: "OSSA",
-    description: `Tom Felton became almost as popular as Daniel Radcliffe! Draco Malfoy became one of the beloved Harry Potter characters despite Joanne Rowling's wish. 
-
-      Some think that directors don't want Tom Felton in their projects, but this is not true. The actor has acted in more than 15 films since the end of Harry Potter, portraying various characters. 
-      
-      But still, since HP, not a single character Tom has portrayed has gotten close to Draco's popularity.  Find out in our new video where is Draco Malfoy actor now? Why was Tom Felton aka Draco Malfoy happy to leave the Harry Potter franchise? How did Harry Potter's actor lose all his money? 
-      
+    description: `Tom Felton became almost as popular as Daniel Radcliffe.
+     
+      Draco Malfoy became one of the beloved Harry Potter characters despite Joanne Rowling's wish. 
+    
+      Why was Tom Felton aka Draco Malfoy happy to leave the Harry Potter franchise? How did Harry Potter's actor lose all his money? 
       Why Hollywood won't cast Tom Felton? Are Tom Felton and Emma Watson friends?`,
     category: "Facts",
     profile:
@@ -69,7 +68,7 @@ export const videos = [
     title:
       "Harry Potter Reunion Trailer! Emma Watson TEARS UP Reuniting With Co-Stars",
     creator: "Entertainment Tonight",
-    description: ` Daniel Radcliffe, Emma Watson, Rupert Grint and their castmates are seen all together in the first trailer for ‘Harry Potter 20th Anniversary: Return to Hogwarts.’ The highly-anticipated retrospective features appearances from Tom Felton, Helena Bonham Carter, Gary Oldman, Ralph Fiennes and more familiar faces from the franchise. ET chats with Rupert, who plays Ron Weasley, who explains why the reunion was so emotional. ‘Harry Potter 20th Anniversary: Return to Hogwarts’ premieres Jan. 1 on HBO Max.`,
+    description: `Daniel Radcliffe, Emma Watson, Rupert Grint and their castmates are seen all together in the first trailer for ‘Harry Potter 20th Anniversary: Return to Hogwarts.’ The highly-anticipated retrospective features appearances from Tom Felton, Helena Bonham Carter, Gary Oldman, Ralph Fiennes and more familiar faces from the franchise. ET chats with Rupert, who plays Ron Weasley, who explains why the reunion was so emotional. ‘Harry Potter 20th Anniversary: Return to Hogwarts’ premieres Jan. 1 on HBO Max.`,
     category: "Interview",
     profile:
       "https://yt3.ggpht.com/ytc/AKedOLTqXgmsFQawqF7Sisoz1o8ubEAc3to7E-IfAC0khQ=s48-c-k-c0x00ffffff-no-rj",
@@ -79,7 +78,7 @@ export const videos = [
     title:
       " Raw footage from J.K. Rowling interview aired on October 8th, 1998, ITN. ",
     creator: "The Rowling Library",
-    description: `aw footage from an interview made in Edinburgh, Scotland, with J.K. Rowling, in 1998.
+    description: `Raw footage from an interview made in Edinburgh, Scotland, with J.K. Rowling, in 1998.
     The interview segment was aired on October 8th, 1998, on ITN, and was around 3 minutes long.
     This is the entire footage from that interview session.
     

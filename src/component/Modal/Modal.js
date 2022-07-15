@@ -19,21 +19,15 @@ export default function Modal({ setShowModal, video }) {
 
   const playlistDispatch = useDispatch();
   const deletePlaylistName = async (playlistId) => {
-    // if (!isUserLoggedIn) return toast.error("Login to delete playlist");
     playlistDispatch(deletePlaylist({ token, playlistId }));
-    console.log("delete check");
     return toast.success("Removed playlist successfully!");
   };
 
   const addVideoToPlayList = async (video, playlistId) => {
-    // if (!isUserLoggedIn)
-    //   return toast.error("Please login to add video to playlist");
     playlistDispatch(addVideoToPlaylist({ video, playlistId, token }));
     return toast.success("Added video to playlist!");
   };
   const removeVideoFromPlayList = async (videoId, playlistId) => {
-    // if (!isUserLoggedIn)
-    //   return toast.error("Please login to remove video from playlist");
     playlistDispatch(removeVideoFromPlaylist({ videoId, playlistId, token }));
     return toast.success("Removed video from playlist!");
   };
@@ -45,12 +39,10 @@ export default function Modal({ setShowModal, video }) {
     );
 
   const updatePlaylist = (e, video, playlistId) => {
-    console.log(e.target.checked);
     e.target.checked
       ? addVideoToPlayList(video, playlistId)
       : removeVideoFromPlayList(video._id, playlistId);
   };
-  console.log(playlistsData);
   return (
     <div className="modal">
       <div>
@@ -71,7 +63,6 @@ export default function Modal({ setShowModal, video }) {
                   onChange={(e) => {
                     updatePlaylist(e, video, playlist._id);
                   }}
-                  // checked={isInPlaylist(playlist._id, video._id)}
                 />
                 <label htmlFor={playlist._id}> {playlist.title}</label>
               </div>
@@ -79,7 +70,6 @@ export default function Modal({ setShowModal, video }) {
               <FaTrash
                 className="cursor-pointer white-text-color mt-1 fs-1"
                 onClick={() => {
-                  console.log("check delete");
                   deletePlaylistName(playlist._id);
                 }}
               />

@@ -10,7 +10,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { addToHistory } from "../../store/historySlice";
 import PlaylistPortal from "../../PlaylistPortal";
-// import { postPlaylist } from "../../store/playlistSlice";
 
 const checkIfPresentLikes = (likes, videoId) => {
   return likes.some((item) => item._id === videoId);
@@ -42,13 +41,6 @@ const Videopage = () => {
     }
     toast.warning("Kindly Login to add Likes");
   };
-
-  //playlistHandler
-  // const playlistHandler = () => {
-
-  //     Dispatch(postPlaylist({ token: token }));
-
-  // };
 
   useEffect(() => {
     (async () => {

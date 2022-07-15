@@ -8,13 +8,11 @@ import "./Modal.css";
 export default function PlaylistInputForm() {
   const [playlistName, setPlayListName] = useState("");
   const inputPlaylistDispatch = useDispatch();
-  // const token = useSelector((state) => state.auth);
   const {
     user: { token },
   } = useSelector((store) => store.auth);
 
   const addPlaylistNameHandler = async (playlistName) => {
-    // if (!isUserLoggedIn) return toast.error("Please login to create playlist.");
     const playlist = { title: playlistName };
     inputPlaylistDispatch(addNewPlaylist({ playlist, token }));
     setPlayListName(" ");

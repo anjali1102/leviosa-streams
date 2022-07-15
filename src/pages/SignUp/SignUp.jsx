@@ -7,11 +7,9 @@ const SignUp = () => {
       <div className="center">
         <h1>Sign Up</h1>
         <form>
-          {/* onSubmit={handleSubmit} */}
           <div className="txt_field">
             <input
               type="text"
-              // onChange={(event) => setName(event.target.value)}
               required
             />
             <label>Enter your Full Name</label>
@@ -19,7 +17,6 @@ const SignUp = () => {
           <div className="txt_field">
             <input
               type="text"
-              // onChange={(event) => setEmail(event.target.value)}
               required
             />
             <label>Email Address</label>
@@ -27,7 +24,6 @@ const SignUp = () => {
           <div className="txt_field">
             <input
               type="password"
-              // onChange={(event) => setPassword(event.target.value)}
               required
             />
             <label>Password</label>
@@ -36,7 +32,6 @@ const SignUp = () => {
             className="btn btn-success"
             type="submit"
             value="Register"
-            // onClick={handleSubmit}
           >
             Create New Account
           </button>

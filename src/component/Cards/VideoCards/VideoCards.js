@@ -5,8 +5,9 @@ import { IoIosCloseCircle } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromLikes } from "../../../store/likeSlice";
 import { removeFromHistory } from "../../../store/historySlice";
+import { removeVideoFromPlaylist } from "../../../store/playlistSlice";
 
-const VideoCards = ({ _id, title, creator, profile }) => {
+const VideoCards = ({ _id, title, creator, profile, playlistDetails }) => {
   const {
     user: { token },
   } = useSelector((store) => store.auth);
@@ -31,6 +32,14 @@ const VideoCards = ({ _id, title, creator, profile }) => {
               Dispatch(removeFromLikes({ videoId: _id, token }));
             } else if (Location.pathname === "/history") {
               Dispatch(removeFromHistory({ videoId: _id, token }));
+            } else if (Location.pathname === "/playlist") {
+              Dispatch(
+                removeVideoFromPlaylist({
+                  videoId: _id,
+                  token,
+                  playlistId: playlistDetails._id,
+                })
+              );
             }
           }}
         />

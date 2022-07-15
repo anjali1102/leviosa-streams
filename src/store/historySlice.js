@@ -106,7 +106,8 @@ export const addToHistory = createAsyncThunk(
 
 export const removeFromHistory = createAsyncThunk(
   "history/removeFromHistory",
-  async (data, thunkAPI) => {
+  async (
+  data, thunkAPI) => {
     const { videoId, token } = data;
     try {
       const response = await axios.delete(`/api/user/history/${videoId}`, {

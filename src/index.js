@@ -8,7 +8,7 @@ import { Navbar } from "./component/index";
 import store from "./store/store";
 import { Provider } from "react-redux";
 
-// Call make Server
+// Initiate Server
 makeServer();
 
 ReactDOM.render(

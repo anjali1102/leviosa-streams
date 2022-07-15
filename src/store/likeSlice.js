@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { STATUSES } from "./videoSlice";
 
 const initialState = {
   likes: [],
@@ -13,41 +13,38 @@ const likeSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getLikes.pending, (state, action) => {
-        console.log("pending");
+        state.status = STATUSES.IDLE;
       })
       .addCase(getLikes.fulfilled, (state, action) => {
         if (action.payload) {
-          console.log("getLikes fulfilled", action.payload);
           state.likes = action.payload.likes;
         }
       })
       .addCase(getLikes.rejected, (state, action) => {
-        console.log("rejected");
+        state.status = STATUSES.ERROR;
       })
 
       .addCase(addToLikes.pending, (state, action) => {
-        console.log("pending");
+        state.status = STATUSES.IDLE;
       })
       .addCase(addToLikes.fulfilled, (state, action) => {
-        console.log("addToLikes fulfilled", action.payload);
         if (action.payload) {
           state.likes = action.payload.likes;
         }
       })
       .addCase(addToLikes.rejected, (state, action) => {
-        console.log("rejected");
+        state.status = STATUSES.ERROR;
       })
       .addCase(removeFromLikes.pending, (state, action) => {
-        console.log("pending");
+        state.status = STATUSES.IDLE;
       })
       .addCase(removeFromLikes.fulfilled, (state, action) => {
         if (action.payload) {
           state.likes = action.payload.likes;
-          toast.success("Video removed From Likes ");
         }
       })
       .addCase(removeFromLikes.rejected, (state, action) => {
-        console.log("rejected");
+        state.status = STATUSES.ERROR;
       });
   },
 });
@@ -78,7 +75,7 @@ export const addToLikes = createAsyncThunk(
     try {
       const response = await axios.post(
         "/api/user/likes",
-        { video:videoInfo },
+        { video: videoInfo },
         {
           headers: {
             authorization: token,

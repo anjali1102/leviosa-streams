@@ -26,7 +26,6 @@ function App() {
     dispatch(fetchVideos());
   }, []);
 
-  // dispatch(fetchVideos());
   return (
     <div className="App">
       <Routes>

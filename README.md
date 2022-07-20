@@ -30,7 +30,7 @@ $ npm start
 - React JS
 - React Router v6
 - Redux
-- Vanilla CSS integrated with [Mor UI](https://mor-ui.vercel.app/) Component Library
+- Vanilla CSS integrated with [Rapid UI](https://rapidui.vercel.app/) Component Library
 - Git For Version Control
 - vercel for Deployment
 - React Player

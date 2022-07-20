@@ -9,7 +9,7 @@ $ npm start
 ## Screens in this projecta
 
 - Video Listing Page
-- Authentication (Guest Login) Page
+- Authentication (Guest Login only) Page
 - Single Video Page
 - Playlist Management Page
 - Watch Later Page

@@ -36,7 +36,7 @@ $ npm start
 - React Player
 
 ## Live Link
-[Leviosa Streams](https://leviosa-streams.vercel.app/)
+[Leviosa Streams](https://leviosa-streams-mx4z6t536-anjali1102.vercel.app/)
 
 ## Demo Video
 

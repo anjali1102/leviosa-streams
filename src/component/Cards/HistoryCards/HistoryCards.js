@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteWatchLater } from "../../../store/watchLaterSlice";
 import "../Cards.css";
+import toast, { Toaster } from "react-hot-toast";
 
 const HistoryCards = ({ video }) => {
   const { _id, title, creator, profile } = video;
@@ -10,8 +11,17 @@ const HistoryCards = ({ video }) => {
   const {
     user: { token },
   } = useSelector((store) => store.auth);
+
+  const deleteWatchLaterHandler = () => {
+    if (token) {
+      dispatch(deleteWatchLater({ videoId: _id, token: token }));
+      toast.success("Deleted successfully");
+    }
+  };
+
   return (
     <div>
+      <Toaster />
       <div className="card-vertical">
         <Link to={`/video/${_id}`}>
           <img
@@ -36,9 +46,7 @@ const HistoryCards = ({ video }) => {
             <div className="del-icon-cont">
               <RiDeleteBinLine
                 className="del-icon"
-                onClick={() =>
-                  dispatch(deleteWatchLater({ videoId: _id, token: token }))
-                }
+                onClick={deleteWatchLaterHandler}
               />
             </div>
           </div>

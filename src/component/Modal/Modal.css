@@ -33,3 +33,10 @@
 .plus-icon {
   background-color: green;
 }
+
+.playlist-close-btn {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 0.2rem;
+}

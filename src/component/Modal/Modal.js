@@ -45,10 +45,10 @@ export default function Modal({ setShowModal, video }) {
   };
   return (
     <div className="modal">
-      <div>
+      <div className="modal-playlist">
         <div>
           <p onClick={() => setShowModal(false)} className="cursor-pointer">
-            X
+            <span className="playlist-close-btn">X</span>
           </p>
         </div>
         <div>

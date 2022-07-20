@@ -7,7 +7,7 @@ import { AiOutlineLike, AiTwotoneLike } from "react-icons/ai";
 import { MdPlaylistAdd } from "react-icons/md";
 import { addToLikes, removeFromLikes } from "../../store/likeSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { toast } from "react-toastify";
+import toast, { Toaster } from "react-hot-toast";
 import { addToHistory } from "../../store/historySlice";
 import PlaylistPortal from "../../PlaylistPortal";
 
@@ -39,7 +39,10 @@ const Videopage = () => {
       }
       return;
     }
-    toast.warning("Kindly Login to add Likes");
+
+    {
+      toast.error("Kindly Login to add Likes");
+    }
   };
 
   useEffect(() => {
@@ -62,56 +65,67 @@ const Videopage = () => {
   }, [likes, videoId]);
 
   return (
-    <main className={styles.videoPage}>
-      {showModal ? (
-        <PlaylistPortal setShowModal={setShowModal} video={videoInfo} />
-      ) : null}
-      <ReactPlayer
-        url={`https://www.youtube.com/watch?v=${videoId}`}
-        width={"100%"}
-        controls={true}
-        style={{ aspectRatio: "9/16" }}
-        playing
-        onPlay={() => Dispatch(addToHistory({ video: videoInfo, token }))}
-      ></ReactPlayer>
+    <>
+      <Toaster />
+      <main className={styles.videoPage}>
+        {showModal ? (
+          <PlaylistPortal setShowModal={setShowModal} video={videoInfo} />
+        ) : null}
+        <ReactPlayer
+          url={`https://www.youtube.com/watch?v=${videoId}`}
+          width={"100%"}
+          controls={true}
+          style={{ aspectRatio: "9/16" }}
+          playing
+          onPlay={() => Dispatch(addToHistory({ video: videoInfo, token }))}
+        ></ReactPlayer>
 
-      {videoInfo && (
-        <section>
-          <div className="videopg_main-con">
-            <h2 className={styles.title}>{videoInfo?.title}</h2>
-            <div className={styles.videoDesc}>
-              <img
-                className={styles.videoImg}
-                src={videoInfo?.profile}
-                alt={videoInfo?.profile}
-              />
-              <div className={styles.creator} src={videoInfo?.creator}>
-                {videoInfo?.creator}
+        {videoInfo && (
+          <section>
+            <div className="videopg_main-con">
+              <h2 className={styles.title}>{videoInfo?.title}</h2>
+              <div className={styles.videoDesc}>
+                <img
+                  className={styles.videoImg}
+                  src={videoInfo?.profile}
+                  alt={videoInfo?.profile}
+                />
+                <div className={styles.creator} src={videoInfo?.creator}>
+                  {videoInfo?.creator}
+                </div>
+                <div className={styles.buttons}>
+                  <div onClick={likeHandler}>
+                    {presentInLikes ? (
+                      <button className={styles.button}>
+                        <AiTwotoneLike className={styles.button} />
+                      </button>
+                    ) : (
+                      <button className={styles.button}>
+                        <AiOutlineLike />
+                      </button>
+                    )}
+                  </div>
+                  <div
+                    onClick={() => {
+                      if (!token) {
+                        toast.error("Login first ");
+                      } else {
+                        setShowModal(true);
+                      }
+                    }}
+                  >
+                    <MdPlaylistAdd className={styles.button} />
+                  </div>
+                </div>
               </div>
-              <div className={styles.buttons}>
-                <div onClick={likeHandler}>
-                  {presentInLikes ? (
-                    <button className={styles.button}>
-                      <AiTwotoneLike className={styles.button} />
-                    </button>
-                  ) : (
-                    <button className={styles.button}>
-                      <AiOutlineLike />
-                    </button>
-                  )}
-                </div>
-                <div onClick={() => setShowModal(true)}>
-                  <MdPlaylistAdd className={styles.button} />
-                </div>
+              <div className={videoInfo.description}>
+                {videoInfo?.description}
               </div>
             </div>
-            <div className={videoInfo.description}>
-              {videoInfo?.description}
-            </div>
-          </div>
-        </section>
-      )}
-    </main>
+          </section>
+        )}
+      </main>
+    </>
   );
 };
 export { Videopage };

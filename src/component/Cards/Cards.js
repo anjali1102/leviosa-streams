@@ -4,6 +4,7 @@ import { addToWatchLater } from "../../store/watchLaterSlice";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import toast, { Toaster } from "react-hot-toast";
 
 const Cards = ({ video }) => {
   const { _id, title, creator, profile } = video;
@@ -11,8 +12,19 @@ const Cards = ({ video }) => {
   const {
     user: { token },
   } = useSelector((store) => store.auth);
+
+  const watchLaterHandler = () => {
+    if (token) {
+      dispatch(addToWatchLater({ video: video, token: token }));
+      toast.success("Added to watch later");
+    } else {
+      toast.error("Login First");
+    }
+  };
+
   return (
     <div>
+      <Toaster />
       <div className="card-vertical">
         <Link to={`/video/${_id}`}>
           <img
@@ -36,9 +48,9 @@ const Cards = ({ video }) => {
             <p className="disc">{creator}</p>
             <div>
               <MdOutlineWatchLater
-              className="watchLater-icon"
-                onClick={() =>
-                  dispatch(addToWatchLater({ video: video, token: token }))
+                className="watchLater-icon"
+                onClick={
+                  watchLaterHandler
                 }
               />
             </div>

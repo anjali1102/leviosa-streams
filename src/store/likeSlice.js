@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { STATUSES } from "./videoSlice";
+import { toast } from "react-hot-toast";
 
 const initialState = {
   likes: [],
@@ -30,6 +31,7 @@ const likeSlice = createSlice({
       .addCase(addToLikes.fulfilled, (state, action) => {
         if (action.payload) {
           state.likes = action.payload.likes;
+          toast.success("Added to Likes 😍");
         }
       })
       .addCase(addToLikes.rejected, (state, action) => {
@@ -41,6 +43,7 @@ const likeSlice = createSlice({
       .addCase(removeFromLikes.fulfilled, (state, action) => {
         if (action.payload) {
           state.likes = action.payload.likes;
+          toast.success("Removed From Likes ");
         }
       })
       .addCase(removeFromLikes.rejected, (state, action) => {

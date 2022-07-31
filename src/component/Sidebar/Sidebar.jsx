@@ -19,7 +19,7 @@ const Sidebar = () => {
         <Link to="/">
           <li className="listRow">
             <div id="icon">
-              <GoHome />
+              <GoHome size="1.5rem" />
             </div>
             <div id="title">Home</div>
           </li>
@@ -28,7 +28,7 @@ const Sidebar = () => {
         <Link to="/likes">
           <li className="listRow">
             <div id="icon">
-              <GoHeart />
+              <GoHeart size="1.5rem" />
             </div>
             <div id="title">Like</div>
           </li>
@@ -37,7 +37,7 @@ const Sidebar = () => {
         <Link to="/playlist">
           <li className="listRow">
             <div id="icon">
-              <GoPlay />
+              <GoPlay size="1.5rem" />
             </div>
             <div id="title">Playlist</div>
           </li>
@@ -46,7 +46,7 @@ const Sidebar = () => {
         <Link to="/watchlater">
           <li className="listRow">
             <div id="icon">
-              <GoClock />
+              <GoClock size="1.5rem" />
             </div>
             <div id="title">Watch Later</div>
           </li>
@@ -55,7 +55,7 @@ const Sidebar = () => {
         <Link to="/history">
           <li className="listRow">
             <div id="icon">
-              <GoHistory />
+              <GoHistory size="1.5rem" />
             </div>
             <div id="title">History</div>
           </li>
@@ -70,14 +70,14 @@ const Sidebar = () => {
               }}
             >
               <div id="icon">
-                <FiLogOut />
+                <FiLogOut size="1.5rem" />
               </div>
               <div id="title">Logout</div>
             </button>
           ) : (
             <Link to="/login" className="listRow">
               <div id="icon">
-                <FiUser />
+                <FiUser size="1.5rem" />
               </div>
               <div id="title">Login</div>
             </Link>

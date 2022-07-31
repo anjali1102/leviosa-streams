@@ -70,3 +70,8 @@
 .nav-items a img {
   width: 1.875rem;
 }
+
+.themeBackground,
+.search {
+  display: none;
+}

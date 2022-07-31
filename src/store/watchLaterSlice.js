@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { STATUSES } from "./videoSlice";
+import { toast } from "react-hot-toast";
 
 const initialState = {
   watchLater: [],
@@ -33,6 +34,7 @@ const watchLaterSlice = createSlice({
         state.status = STATUSES.IDLE;
         if (action.payload) {
           state.watchLater = action.payload.watchlater;
+          toast.success("Added to Watch Later ⏰");
         }
       })
       .addCase(addToWatchLater.rejected, (state, action) => {
@@ -46,6 +48,7 @@ const watchLaterSlice = createSlice({
         state.status = STATUSES.IDLE;
         if (action.payload) {
           state.watchLater = action.payload.watchlater;
+          toast.success("Removed From Watch Later ⏰");
         }
       })
       .addCase(deleteWatchLater.rejected, (state, action) => {

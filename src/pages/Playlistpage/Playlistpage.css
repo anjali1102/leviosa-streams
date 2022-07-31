@@ -1,0 +1,37 @@
+.playlistVideo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+}
+
+.playlist-container {
+  justify-content: space-between;
+}
+
+.playlistName-title {
+  display: flex;
+  align-items: center;
+  row-gap: 1rem;
+  cursor: pointer;
+}
+
+.playlistDeleteIcon {
+  font-size: large;
+  margin-top: 2px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.playlistDeleteIcon:hover {
+  color: rgb(230, 136, 136);
+}
+
+.em-play-img {
+  text-align: center;
+}

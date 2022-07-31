@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BiPlus } from "react-icons/bi";
 import { addNewPlaylist } from "../../store/playlistSlice";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import "./Modal.css";
 
 export default function PlaylistInputForm() {
@@ -19,11 +19,11 @@ export default function PlaylistInputForm() {
     return toast.success("Playlist created!");
   };
   return (
-    <div className="d-flex">
+    <div className="playlist-modal-main">
       <input
         type="text"
         placeholder="Add here..."
-        className="input-playlist grow black-dark-bg"
+        className="input-playlist grow"
         autoFocus={true}
         value={playlistName}
         onChange={(e) => setPlayListName(e.target.value)}
@@ -32,7 +32,7 @@ export default function PlaylistInputForm() {
         className="plus-icon"
         onClick={() => addPlaylistNameHandler(playlistName)}
       >
-        <BiPlus size="20px" className="cursor-pointer" />
+        <BiPlus size="20px"/>
       </span>
     </div>
   );

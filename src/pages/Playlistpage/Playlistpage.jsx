@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { VideoCards } from "../../component/Cards/VideoCards/VideoCards";
-import { getAllPlaylist } from "../../store/playlistSlice";
+import { getAllPlaylist, deletePlaylist } from "../../store/playlistSlice";
+import { FaTrash } from "react-icons/fa";
+import "./Playlistpage.css";
 
 const Playlistpage = () => {
   const dispatch = useDispatch();
@@ -15,31 +17,49 @@ const Playlistpage = () => {
     dispatch(getAllPlaylist({ token }));
   }, []);
 
+  const deleteWholePlaylist = (playlistId) => {
+    dispatch(deletePlaylist({ token, playlistId }));
+    console.log("deletePlaylist");
+  };
+
   return (
-    <main className="main-product2">
-      <div className="videoList-container">
+    <main className="main-product3">
+      <div className="playlist-container">
         {playlist.length === 0 && (
-          <h1 className="empt-history">
-            Playlist is Empty 😟<Link to="/">Explore Videos </Link>
-          </h1>
+          <div className="empt-playlist">
+            <div className="em-play-img">
+            <h2>
+              Playlist is Empty 😟<Link to="/">Explore Videos </Link>
+            </h2>
+              <img src="img/empty-playlist.gif" height="300" />
+            </div>
+          </div>
         )}
         {playlist.map((everyPlaylist) => {
           return (
-            <>
-              <h1>{everyPlaylist.title}</h1>
-              {everyPlaylist.videos.map((everyVideo) => {
-                const { _id, title, creator, profile } = everyVideo;
-                return (
-                  <VideoCards
-                    _id={_id}
-                    title={title}
-                    creator={creator}
-                    profile={profile}
-                    playlistDetails={everyPlaylist}
-                  />
-                );
-              })}
-            </>
+            <div className="playlistVideo" key={everyPlaylist._id}>
+              <div className="playlistName-title">
+                <h1>{everyPlaylist.title}</h1>
+                <FaTrash
+                  className="playlistDeleteIcon"
+                  onClick={() => deleteWholePlaylist(everyPlaylist._id)}
+                />
+              </div>
+              <div className="d-flex">
+                {everyPlaylist.videos.map((everyVideo) => {
+                  const { _id, title, creator, profile } = everyVideo;
+                  return (
+                    <VideoCards
+                      _id={_id}
+                      title={title}
+                      creator={creator}
+                      profile={profile}
+                      playlistDetails={everyPlaylist}
+                    />
+                  );
+                })}
+              </div>
+            </div>
           );
         })}
       </div>

@@ -9,9 +9,19 @@ $ npm start
 ## Screens in this projecta
 
 - Video Listing Page
-- Authentication (Guest Login only) Page
+- Authentication Page
+  - guest login
+  - signup
+  - login
 - Single Video Page
+  - playlist
+  - like
 - Playlist Management Page
+  - create playlists
+  - add videos to individual playlist
+  - On Playlist Page 
+    - Delete individual Playlists
+    - Delete videos from Playlists
 - Watch Later Page
 - Watch History Page
 - Liked Videos Page

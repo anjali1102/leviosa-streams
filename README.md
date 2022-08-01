@@ -50,7 +50,8 @@ $ npm start
 
 ## Demo Video
 
-![image](https://user-images.githubusercontent.com/56559378/179949112-b97c2b51-6037-4d5d-980f-9325ba347949.png)
+![image](https://user-images.githubusercontent.com/56559378/182254654-5e1d7205-0e98-4bf4-81ab-d47042d0f5f3.png)
+
 
 
 

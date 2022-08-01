@@ -115,4 +115,34 @@ export const videos = [
     profile:
       "	https://yt3.ggpht.com/ytc/AKedOLT6FsfPPHGsiCVZ4I0HdowuISHkHgOpVMinEvYS7A=s48-c-k-c0x00ffffff-no-rj",
   },
+  {
+    _id: "wl7Ckc0iILg",
+    title: "Harry Potter (A Funny Animated Spoof)",
+    creator: "Karan Animations",
+    description: `A Harry Potter and the Sorcerer's Stone funny animation Spoof. In this Video Harry is a Punjabi Guy called "Hari Putter" is on adventure with his Friends Hermione and Ron. Made using Adobe Flash and Premiere pro with my Laptop and Mouse. Let me know your favorite Dialogue of the video and don't forget to share with your Hogwarts Friends:). 
+    Stay Tuned more to come in the future!
+    `,
+    category: "Funny",
+    profile:
+      "https://yt3.ggpht.com/M87neGn192YBZObUNPlWH3LUJOGI7Swl42HCtJPGKjuQnMjUsqrtN_Crj3BzslXCfVrgOJVs8g=s48-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    _id: "P6mJTbyN9vI",
+    title: "Harry Potter Students Vs. Professors Bloopers",
+    creator: "TheThings",
+    description: `We are all for some Harry Potter bloopers - and this time it's not just the students. Even the Professors at Hogwarts goofed off a little bit - sometimes at the student’s expenses.
+    `,
+    category: "Funny",
+    profile:
+      "https://yt3.ggpht.com/ytc/AMLnZu_S_V2QQxHyck2B0r_lvtovB-IyPZQMaTv48lccww=s48-c-k-c0x00ffffff-no-rj",
+  },
+  {
+    _id: "u37o8qD6yXg",
+    title: "Top 10 Biggest Reveals in Harry Potter",
+    creator: "MsMojo",
+    description: `Our return to Hogwarts unleashed a chamber of secrets. For this list, we’ll be looking at details and behind-the-scenes facts from the “Harry Potter” reunion, some of which hadn’t been revealed before. Our countdown includes Daniel Radcliffe wrote a love letter to Helena Bonham Carter, Jason Isaacs originally auditioned for Gilderoy Lockhart, the Great Hall’s Floating candles were originally real, and more!`,
+    category: "Facts",
+    profile:
+      "	https://yt3.ggpht.com/ytc/AMLnZu-HCqH_dEb7miTjjVd_vrvu3nKiZ4Ng18HanZ7ZQQ=s68-c-k-c0x00ffffff-no-rj",
+  },
 ];

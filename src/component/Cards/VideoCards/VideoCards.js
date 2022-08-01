@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromLikes } from "../../../store/likeSlice";
 import { removeFromHistory } from "../../../store/historySlice";
 import { removeVideoFromPlaylist } from "../../../store/playlistSlice";
+import toast from "react-hot-toast";
 
 const VideoCards = ({ _id, title, creator, profile, playlistDetails }) => {
   const {
@@ -40,6 +41,7 @@ const VideoCards = ({ _id, title, creator, profile, playlistDetails }) => {
                   playlistId: playlistDetails._id,
                 })
               );
+              toast.success("Video removed From Playlist");
             }
           }}
         />

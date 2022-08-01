@@ -15,7 +15,6 @@ const HistoryCards = ({ video }) => {
   const deleteWatchLaterHandler = () => {
     if (token) {
       dispatch(deleteWatchLater({ videoId: _id, token: token }));
-      toast.success("Deleted successfully");
     }
   };
 

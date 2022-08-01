@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaTrash } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import PlaylistInputForm from "./PlaylistInputForm";
@@ -7,12 +7,12 @@ import {
   addVideoToPlaylist,
   removeVideoFromPlaylist,
 } from "../../store/playlistSlice";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import "./Modal.css";
 
 export default function Modal({ setShowModal, video }) {
   const playlistsData = useSelector((state) => state.playlist.playlist);
-  const isUserLoggedIn = useSelector((state) => state.auth.isUserLoggedin);
+  // const isUserLoggedIn = useSelector((state) => state.auth.isUserLoggedin);
   const {
     user: { token },
   } = useSelector((store) => store.auth);
@@ -31,12 +31,6 @@ export default function Modal({ setShowModal, video }) {
     playlistDispatch(removeVideoFromPlaylist({ videoId, playlistId, token }));
     return toast.success("Removed video from playlist!");
   };
-  const isInPlaylist = (PlaylistId, videoId) =>
-    playlistsData.some((playlist) =>
-      playlist._id === PlaylistId
-        ? playlist.videos.some((video) => video._id === videoId)
-        : false
-    );
 
   const updatePlaylist = (e, video, playlistId) => {
     e.target.checked
@@ -46,7 +40,7 @@ export default function Modal({ setShowModal, video }) {
   return (
     <div className="modal">
       <div className="modal-playlist">
-        <div>
+        <div className="close-btn-modal">
           <p onClick={() => setShowModal(false)} className="cursor-pointer">
             <span className="playlist-close-btn">X</span>
           </p>
@@ -54,7 +48,7 @@ export default function Modal({ setShowModal, video }) {
         <div>
           <p>Add to existing playlist :</p>
           {playlistsData.map((playlist) => (
-            <div key={playlist._id}>
+            <div className="modalPlaylist-container" key={playlist._id}>
               <div>
                 <input
                   type="checkbox"

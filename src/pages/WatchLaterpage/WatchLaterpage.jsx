@@ -9,9 +9,12 @@ const WatchLaterpage = () => {
     <main className="main-product2">
       <div className="videoList-container">
         {watchlaterVideos.length === 0 && (
-          <h1 className="empt-history">
-            WatchLater is Empty 🙆‍♂️ <Link to="/">Explore Videos </Link>
-          </h1>
+          <div className="empt-history">
+            <h3>
+              WatchLater is Empty 🙆‍♂️ <Link to="/">Explore Videos </Link>
+            </h3>
+            <img src="img/empty-watchlater.gif" height="380" />
+          </div>
         )}
         {watchlaterVideos?.map((video) => (
           <HistoryCards video={video} />

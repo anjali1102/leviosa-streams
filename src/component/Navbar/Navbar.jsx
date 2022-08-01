@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import logo  from "../../assets/logo.gif";
+import logo from "../../assets/logo.gif";
 import { Link } from "react-router-dom";
 import { FaSun, FaUser } from "react-icons/fa";
 
@@ -17,13 +17,9 @@ const Navbar = () => {
               <i className="fa fa-search"></i>
             </button>
           </div>
-          <Link to="">
+          <Link to="" className="themeBackground">
             <FaSun size={25} />
-            <span className="themeBackground">{}</span>
-          </Link>
-          <Link to="">
-            <FaUser size={25} />
-            <span className="user-icon">{}</span>
+            <span>{}</span>
           </Link>
         </div>
       </div>

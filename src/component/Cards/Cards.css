@@ -55,6 +55,10 @@
   font-size: 1.8rem;
 }
 
+.watchLater-icon:hover{
+  color: rgb(37, 169, 98);
+}
+
 @media screen and (max-width: 64rem) {
   .filter-wrapper {
     display: none;

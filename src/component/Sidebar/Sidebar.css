@@ -1,6 +1,5 @@
 .Sidebar {
   width: 150px;
-  background-color: #ff746e;
 }
 
 .SidebarList {
@@ -12,12 +11,11 @@
 .listRow {
   width: 100%;
   height: 70px;
-  border: 1px solid #e73933;
   list-style-type: none;
   margin: 0%;
   display: flex;
   flex-direction: row;
-  color: white;
+  color: black;
   justify-content: center;
   align-items: center;
   font-family: monospace;
@@ -25,7 +23,9 @@
 
 .listRow:hover {
   cursor: pointer;
-  background-color: #fa6661;
+  background: -webkit-linear-gradient(to right, #fdb99b, #cf8bf3, #a770ef);
+  background: linear-gradient(to right, #fdb99b, #cf8bf3, #a770ef);
+  color: aliceblue;
 }
 .listRow #icon {
   flex: 30%;
@@ -35,6 +35,7 @@
 
 .listRow #title {
   flex: 70%;
+  font-size: larger;
 }
 
 button.listRow {

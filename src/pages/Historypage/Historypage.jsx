@@ -32,11 +32,16 @@ const Historypage = () => {
   }, []);
 
   return (
-    <main className="main-product">
+    <main className="like-main-product">
       {status !== "loading" && histories.length === 0 && (
-        <h1 className="empt-history">
-          History is Empty 💔 <Link to="/">Explore Videos </Link>
-        </h1>
+        <div className="empt-history">
+          <div>
+            <h3>
+              History is Empty 💔 <Link to="/">Explore Videos </Link>
+            </h3>
+            <img src="img/empty-history.gif" height="350" />
+          </div>
+        </div>
       )}
       {videoList.length > 0 && (
         <div className="clearButton">

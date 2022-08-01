@@ -1,3 +1,17 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 40%;
+  margin: 2rem;
+}
+
+.homepage-container {
+  position: relative;
+}
+
 .main-product {
   display: flex;
   width: 100%;
@@ -7,7 +21,7 @@
   grid-row-gap: 2rem;
   row-gap: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-column-gap: 2rem;
   width: calc(100% - 3rem);
   margin-left: 1rem;
@@ -25,11 +39,16 @@
 .chip-ctg {
   background: -webkit-linear-gradient(to right, #fdb99b, #cf8bf3, #a770ef);
   background: linear-gradient(to right, #fdb99b, #cf8bf3, #a770ef);
-  border: none;
+  border: 2px solid black;
   border-radius: 20px;
   padding: 0.5rem 1rem;
+  font-size: 0.9rem;
   color: white;
   cursor: pointer;
+}
+
+.chip-ctg:hover {
+  border-color: red;
 }
 
 .ClearAllHistory {
@@ -41,4 +60,10 @@
 .empt-history {
   font-size: 1.5rem;
   text-align: center;
+}
+
+.empty-like-main {
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
 }

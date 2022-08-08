@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import logo from "../../assets/logo.gif";
 import { Link } from "react-router-dom";
-import { FaSun, FaUser } from "react-icons/fa";
+// import { FaSun } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -17,10 +17,13 @@ const Navbar = () => {
               <i className="fa fa-search"></i>
             </button>
           </div>
+
+          {/* 
+          //will implement it 
           <Link to="" className="themeBackground">
             <FaSun size={25} />
             <span>{}</span>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>

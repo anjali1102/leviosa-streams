@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--light-gray);
+  background-color: var(--light-gray);
   z-index: 9;
 }
 
@@ -25,12 +25,6 @@
 .search {
   width: 25rem;
   display: flex;
-}
-
-@media screen and (max-width: 48rem) {
-  .search {
-    display: none;
-  }
 }
 
 .search-box {
@@ -69,9 +63,4 @@
 
 .nav-items a img {
   width: 1.875rem;
-}
-
-.themeBackground,
-.search {
-  display: none;
 }

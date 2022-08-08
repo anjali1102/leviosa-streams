@@ -1,10 +1,21 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const tokenFromLocalStorage = localStorage.getItem("token");
 
 const initialState = {
-  user: { token: tokenFromLocalStorage, firstName: "", lastName: "" },
+  user: {
+    token: tokenFromLocalStorage,
+    firstName: "",
+    lastName: "",
+    passType: "password",
+    error: {
+      usernameError: "",
+      emailError: "",
+      passwordError: "",
+    },
+  },
 };
 
 const authSlice = createSlice({
@@ -18,9 +29,6 @@ const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(loginUser.pending, (state, action) => {
-        console.info("pending");
-      })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.user = {
           token: action.payload.encodedToken,
@@ -30,22 +38,29 @@ const authSlice = createSlice({
         localStorage.setItem("token", action.payload.encodedToken);
       })
       .addCase(loginUser.rejected, (state, action) => {
-        console.info(action.payload.message);
-      })
-
-      .addCase(signUpUser.pending, (state, action) => {
-        console.info("pending");
+        const status = action?.payload.response.status;
+        if (status === 404) {
+          state.user.error.emailError = "Email not registered.";
+          state.user.error.passwordError = "";
+          toast.error("Email not registered.");
+        } else if (status === 401) {
+          state.user.error.emailError = "";
+          state.user.error.passwordError = "Password didn't matched.";
+          toast.error("Password didn't matched.");
+        } else {
+          toast.error("Some error occured at login, Try later.");
+        }
       })
       .addCase(signUpUser.fulfilled, (state, action) => {
-        console.log(action.payload);
         state.user = {
           token: action.payload.encodedToken,
           firstName: action.payload.createdUser.firstName,
           lastName: action.payload.createdUser.lastName,
         };
+        localStorage.setItem("token", action.payload.encodedToken);
       })
       .addCase(signUpUser.rejected, (state, action) => {
-        console.info("error");
+        toast.error("Some error occured at signup, Try later.");
       });
   },
 });

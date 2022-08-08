@@ -1,0 +1,33 @@
+.clr-history-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.empt-history {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.historyList-container {
+  grid-gap: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1080px) {
+  .historyList-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card-vertical {
+    min-height: auto;
+  }
+  .historyList-container {
+    grid-template-columns: 1fr;
+  }
+}

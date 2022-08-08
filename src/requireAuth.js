@@ -16,4 +16,14 @@ const RequireAuth = ({ children }) => {
   );
 };
 
-export { RequireAuth };
+const NotRequireAuth = ({ children }) => {
+  const {
+    user: { token },
+  } = useSelector((state) => state.auth);
+
+  const location = useLocation();
+
+  return token ? <Navigate to="/" state={{ from: location }} /> : children;
+};
+
+export { RequireAuth, NotRequireAuth };

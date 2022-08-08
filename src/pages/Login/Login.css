@@ -32,6 +32,17 @@ form .txt_field {
   outline: none;
 }
 
+.password-section {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.passw-eye-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .txt_field label {
   position: absolute;
   top: 50%;
@@ -108,4 +119,12 @@ input[type="submit"]:hover {
   display: grid;
   place-items: center;
   height: 67vh;
+}
+
+.login-btn-main {
+  width: auto;
+}
+
+.btn.btn-success {
+  width: 100%;
 }

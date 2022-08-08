@@ -19,7 +19,6 @@ const Playlistpage = () => {
 
   const deleteWholePlaylist = (playlistId) => {
     dispatch(deletePlaylist({ token, playlistId }));
-    console.log("deletePlaylist");
   };
 
   return (
@@ -28,10 +27,14 @@ const Playlistpage = () => {
         {playlist.length === 0 && (
           <div className="empt-playlist">
             <div className="em-play-img">
-            <h2>
-              Playlist is Empty 😟<Link to="/">Explore Videos </Link>
-            </h2>
-              <img src="img/empty-playlist.gif" height="300" />
+              <h1>
+                Playlist is Empty 😟<Link to="/">Explore Videos </Link>
+              </h1>
+              <img
+                className="img-responsive"
+                src="img/empty-playlist.gif"
+                height="100"
+              />
             </div>
           </div>
         )}

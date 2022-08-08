@@ -12,7 +12,6 @@ import "./Modal.css";
 
 export default function Modal({ setShowModal, video }) {
   const playlistsData = useSelector((state) => state.playlist.playlist);
-  // const isUserLoggedIn = useSelector((state) => state.auth.isUserLoggedin);
   const {
     user: { token },
   } = useSelector((store) => store.auth);
@@ -62,7 +61,7 @@ export default function Modal({ setShowModal, video }) {
               </div>
 
               <FaTrash
-                className="cursor-pointer white-text-color mt-1 fs-1"
+                className="delplaylistNameIcon white-text-color mt-1 fs-1"
                 onClick={() => {
                   deletePlaylistName(playlist._id);
                 }}

@@ -7,7 +7,7 @@ import { AiOutlineLike, AiTwotoneLike } from "react-icons/ai";
 import { MdPlaylistAdd } from "react-icons/md";
 import { addToLikes, removeFromLikes } from "../../store/likeSlice";
 import { useDispatch, useSelector } from "react-redux";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { addToHistory } from "../../store/historySlice";
 import PlaylistPortal from "../../PlaylistPortal";
 
@@ -66,7 +66,6 @@ const Videopage = () => {
 
   return (
     <>
-      <Toaster />
       <main className={styles.videoPage}>
         {showModal ? (
           <PlaylistPortal setShowModal={setShowModal} video={videoInfo} />

@@ -14,7 +14,7 @@ const Sidebar = () => {
   const Dispatch = useDispatch();
 
   return (
-    <div className="Sidebar">
+    <nav className="Sidebar">
       <ul className="SidebarList">
         <Link to="/">
           <li className="listRow">
@@ -84,7 +84,7 @@ const Sidebar = () => {
           )}
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

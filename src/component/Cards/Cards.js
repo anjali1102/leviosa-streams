@@ -2,10 +2,9 @@ import React from "react";
 import "../Cards/Cards.css";
 import { addToWatchLater } from "../../store/watchLaterSlice";
 import { MdOutlineWatchLater } from "react-icons/md";
-import { AiTwotoneLike, AiOutlineLike } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { addToLikes } from "../../store/likeSlice";
 
 const Cards = ({ video }) => {
@@ -33,7 +32,6 @@ const Cards = ({ video }) => {
 
   return (
     <div>
-      <Toaster />
       <div className="card-vertical">
         <Link to={`/video/${_id}`}>
           <img

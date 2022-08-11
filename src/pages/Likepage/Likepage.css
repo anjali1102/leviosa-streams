@@ -1,17 +1,18 @@
-.watchlaterList-container {
+.likeList-container {
   grid-gap: 1rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.empt-watchlater {
-  font-size: 1.5rem;
+.empty-like-main {
+  padding: 2rem;
   text-align: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1080px) {
-  .watchlaterList-container {
+  .likeList-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -20,7 +21,7 @@
   .card-vertical {
     min-height: auto;
   }
-  .watchlaterList-container {
+  .likeList-container {
     grid-template-columns: 1fr;
   }
 }

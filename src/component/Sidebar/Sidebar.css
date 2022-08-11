@@ -1,5 +1,6 @@
 .Sidebar {
   width: 150px;
+  margin: 0.5rem;
 }
 
 .SidebarList {
@@ -40,4 +41,11 @@
 
 button.listRow {
   background-color: #fa6661;
+}
+
+.bg-gradiant.white-color {
+  cursor: pointer;
+  background: -webkit-linear-gradient(to right, #fdb99b, #cf8bf3, #a770ef);
+  background: linear-gradient(to right, #fdb99b, #cf8bf3, #a770ef);
+  color: aliceblue;
 }

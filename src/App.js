@@ -16,8 +16,9 @@ import { useDispatch } from "react-redux";
 import { Login } from "./pages/Login/Login";
 import { SignUp } from "./pages/SignUp/SignUp";
 import { fetchVideos } from "./store/videoSlice";
-import { RequireAuth } from "./requireAuth";
+import { NotRequireAuth, RequireAuth } from "./requireAuth";
 import { Videopage } from "./pages/Videopage/Videopage";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className="App">
+      <Toaster />
       <Routes>
         <Route element={<SidebarLayoutPage />}>
           <Route path="/" element={<Homepage />} />
@@ -63,9 +65,23 @@ function App() {
               </RequireAuth>
             }
           />
+          <Route
+            path="/login"
+            element={
+              <NotRequireAuth> 
+                <Login />
+              </NotRequireAuth>
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <NotRequireAuth>
+                <SignUp />
+              </NotRequireAuth>
+            }
+          />
           <Route path="video/:videoId" element={<Videopage />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/mockapi" element={<Mockman />} />
         </Route>
       </Routes>

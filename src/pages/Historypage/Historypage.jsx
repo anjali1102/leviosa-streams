@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearAllHistory, getHistory } from "../../store/historySlice";
-import "../Homepage/Homepage.css";
+import "../Historypage/Historypage.css";
 import { VideoCards } from "../../component/Cards/VideoCards/VideoCards";
 import { Link } from "react-router-dom";
 
@@ -39,16 +39,25 @@ const Historypage = () => {
             <h3>
               History is Empty 💔 <Link to="/">Explore Videos </Link>
             </h3>
-            <img src="img/empty-history.gif" height="350" />
+            <img
+              src="img/empty-history.gif"
+              className="img-responsive"
+              height="350"
+            />
           </div>
         </div>
       )}
       {videoList.length > 0 && (
         <div className="clearButton">
-          <button onClick={ClearAllHistory}>Clear History</button>
+          <button
+            className="btn btn-danger clr-history-btn"
+            onClick={ClearAllHistory}
+          >
+            Clear History
+          </button>
         </div>
       )}
-      <div className="videoList-container">
+      <div className="historyList-container">
         {videoList?.map(({ _id, title, creator, profile }) => (
           <VideoCards
             key={_id}

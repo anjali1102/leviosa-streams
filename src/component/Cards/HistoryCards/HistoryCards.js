@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteWatchLater } from "../../../store/watchLaterSlice";
 import "../Cards.css";
-import toast, { Toaster } from "react-hot-toast";
 
 const HistoryCards = ({ video }) => {
   const { _id, title, creator, profile } = video;
@@ -20,7 +19,6 @@ const HistoryCards = ({ video }) => {
 
   return (
     <div>
-      <Toaster />
       <div className="card-vertical">
         <Link to={`/video/${_id}`}>
           <img

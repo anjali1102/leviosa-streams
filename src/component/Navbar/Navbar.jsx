@@ -1,7 +1,6 @@
 import "./Navbar.css";
 import logo from "../../assets/logo.gif";
 import { Link } from "react-router-dom";
-// import { FaSun } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -11,19 +10,15 @@ const Navbar = () => {
           <img src={logo} className="brand-logo" alt="logo" />
         </Link>
         <div className="nav-items">
+          <span className="nav-title-main">
+            LEVIOSA STREAMS : A little video for everyone.🧙
+          </span>
           <div className="search">
             <input type="text" className="search-box" placeholder="search" />
             <button className="search-btn">
               <i className="fa fa-search"></i>
             </button>
           </div>
-
-          {/* 
-          //will implement it 
-          <Link to="" className="themeBackground">
-            <FaSun size={25} />
-            <span>{}</span>
-          </Link> */}
         </div>
       </div>
     </nav>

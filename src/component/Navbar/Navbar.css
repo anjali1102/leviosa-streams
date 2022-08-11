@@ -1,5 +1,4 @@
 .navbar_container {
-  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -63,4 +62,12 @@
 
 .nav-items a img {
   width: 1.875rem;
+}
+
+.nav-title-main {
+  font-size: larger;
+  font-weight: bolder;
+  color: #cf8bf3;
+  border: 2px solid #fdb99b;
+  /* color: linear-gradient(to right, #fdb99b, #cf8bf3, #a770ef); */
 }

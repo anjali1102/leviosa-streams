@@ -29,7 +29,15 @@ function App() {
 
   return (
     <div className="App">
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        }}
+      />
       <Routes>
         <Route element={<SidebarLayoutPage />}>
           <Route path="/" element={<Homepage />} />
@@ -68,7 +76,7 @@ function App() {
           <Route
             path="/login"
             element={
-              <NotRequireAuth> 
+              <NotRequireAuth>
                 <Login />
               </NotRequireAuth>
             }

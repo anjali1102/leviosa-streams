@@ -43,12 +43,11 @@ export const videos = [
     _id: "8lcaOicMVGM",
     title: "Tom Felton Won't Be The Same Anymore After Harry Potter |⭐ OSSA",
     creator: "OSSA",
-    description: `Tom Felton became almost as popular as Daniel Radcliffe.
-     
-     Draco Malfoy became one of the beloved Harry Potter characters despite Joanne Rowling's wish.`,
+    description: 
+      "Draco Malfoy became one of the beloved Harry Potter characters despite Joanne Rowling's wish.",
     category: "Facts",
     profile:
-      "	https://yt3.ggpht.com/16Rw4XNzE2UG7mAmdUMRRwkaVYKH28Sta0CF59PPB7yKChkPMa9OruGdWpaaeOx1jUNwWkMskA=s48-c-k-c0x00ffffff-no-rj",
+      "https://yt3.ggpht.com/ytc/AKedOLQmvAn-4uyne2U7Gq1j11tGEBRW8ND35N3qmxYhKg=s48-c-k-c0x00ffffff-no-rj",
   },
   {
     _id: "TRG7HwiprZU",

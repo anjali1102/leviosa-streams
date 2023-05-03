@@ -45,10 +45,7 @@ export const videos = [
     creator: "OSSA",
     description: `Tom Felton became almost as popular as Daniel Radcliffe.
      
-      Draco Malfoy became one of the beloved Harry Potter characters despite Joanne Rowling's wish. 
-    
-      Why was Tom Felton aka Draco Malfoy happy to leave the Harry Potter franchise? How did Harry Potter's actor lose all his money? 
-      Why Hollywood won't cast Tom Felton? Are Tom Felton and Emma Watson friends?`,
+     Draco Malfoy became one of the beloved Harry Potter characters despite Joanne Rowling's wish.`,
     category: "Facts",
     profile:
       "	https://yt3.ggpht.com/16Rw4XNzE2UG7mAmdUMRRwkaVYKH28Sta0CF59PPB7yKChkPMa9OruGdWpaaeOx1jUNwWkMskA=s48-c-k-c0x00ffffff-no-rj",

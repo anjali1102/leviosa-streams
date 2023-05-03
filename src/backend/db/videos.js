@@ -86,19 +86,13 @@ export const videos = [
       "	https://yt3.ggpht.com/ytc/AKedOLQt2Nkv3AeWRNCqdBThxo8EQlIWy-bVuVR3biJo=s88-c-k-c0x00ffffff-no-rj",
   },
   {
-    _id: "CGfsq5l3uzQ",
-    title: "Only Harry Potter Fans Will Find Funny #9 | Potter Heads",
-    creator: "Potter Heads",
-    description: `Only Harry Potter Fans Will Find Funny #9 | Potter Heads
-
-
-      🎃Hello There #potter_heads
-            As We All Love #harry_potter So Much I Thought You Guys  Might like
-            Some #harry_potter You Some Of  The Most Funniest Memes Of Harry  
-            Potter ...........                               `,
+    _id: "dpsmKKUah4M",
+    title: "Only Harry Potter Fans Will Find Funny",
+    creator: "Whatever Potter",
+    description: "Only Harry Potter Fans Will Find Funny",
     category: "funny",
     profile:
-      "	https://yt3.ggpht.com/lvSgiQQGNamWx8WWZOP5mea-Kjhz86otTAkMXc52oAKKh8YwFGfG-7MBD6mXL-Y3dV8_IKrMFQ=s48-c-k-c0x00ffffff-no-rj",
+      "	https://yt3.googleusercontent.com/ytc/AGIKgqNvNejHvDPV4gG2uB-S7UUiyi-11wuhGbxNW75crg=s176-c-k-c0x00ffffff-no-rj",
   },
   {
     _id: "B18ss3dbRAI",

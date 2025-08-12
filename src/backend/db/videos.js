@@ -57,7 +57,7 @@ export const videos = [
       " Alan Rickman visited us recently to talk about his new film A Little Chaos with Reel Pieces ",
     category: "Interview",
     profile:
-      "https://yt3.googleusercontent.com/rx8DO4LKovavgnvet-Rro1jR5_mnmnBj8HwJ27MDcCEIGTLmiCpeGvcuf4uTuw8AO5Q8qSEMlA=s160-c-k-c0x00ffffff-no-rj",
+      "https://yt3.ggpht.com/ytc/AKedOLQmvAn-4uyne2U7Gq1j11tGEBRW8ND35N3qmxYhKg=s48-c-k-c0x00ffffff-no-rj",
   },
   {
     _id: "eVffeHeHEFU",
@@ -114,7 +114,7 @@ export const videos = [
     `,
     category: "Funny",
     profile:
-      "https://yt3.ggpht.com/mej1LBxLIQc3RNrC-yOmySiT5OLTsS0P-at9GGkqUqD_laJSO5JhG53Xs1ITn8yZ5J5DkE__JGE=s88-c-k-c0x00ffffff-no-rj",
+      "https://yt3.ggpht.com/ytc/AKedOLQmvAn-4uyne2U7Gq1j11tGEBRW8ND35N3qmxYhKg=s48-c-k-c0x00ffffff-no-rj",
   },
   {
     _id: "P6mJTbyN9vI",
